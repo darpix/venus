@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wesley/Workspace/venus/src/vwindow.cpp
+vwindow.h
+/home/wesley/Workspace/venus/src/vwindow.h
+
+/home/wesley/Workspace/venus/src/vwindow.h
+
+/home/wesley/Workspace/venus/test.cpp
+iostream
+-
+
