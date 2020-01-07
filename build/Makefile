@@ -169,6 +169,60 @@ venus/fast:
 	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/build
 .PHONY : venus/fast
 
+src/vwindow.o: src/vwindow.cpp.o
+
+.PHONY : src/vwindow.o
+
+# target to build an object file
+src/vwindow.cpp.o:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/vwindow.cpp.o
+.PHONY : src/vwindow.cpp.o
+
+src/vwindow.i: src/vwindow.cpp.i
+
+.PHONY : src/vwindow.i
+
+# target to preprocess a source file
+src/vwindow.cpp.i:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/vwindow.cpp.i
+.PHONY : src/vwindow.cpp.i
+
+src/vwindow.s: src/vwindow.cpp.s
+
+.PHONY : src/vwindow.s
+
+# target to generate assembly for a file
+src/vwindow.cpp.s:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/vwindow.cpp.s
+.PHONY : src/vwindow.cpp.s
+
+test.o: test.cpp.o
+
+.PHONY : test.o
+
+# target to build an object file
+test.cpp.o:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/test.cpp.o
+.PHONY : test.cpp.o
+
+test.i: test.cpp.i
+
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cpp.i:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/test.cpp.s
+.PHONY : test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -182,6 +236,12 @@ help:
 	@echo "... install/local"
 	@echo "... rebuild_cache"
 	@echo "... install"
+	@echo "... src/vwindow.o"
+	@echo "... src/vwindow.i"
+	@echo "... src/vwindow.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

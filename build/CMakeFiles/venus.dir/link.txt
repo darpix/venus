@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/venus.dir/main.cpp.o  -o venus 
+/usr/bin/c++    -rdynamic CMakeFiles/venus.dir/test.cpp.o CMakeFiles/venus.dir/src/vwindow.cpp.o  -o venus 
