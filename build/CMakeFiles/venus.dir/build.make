@@ -57,67 +57,145 @@ include CMakeFiles/venus.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/venus.dir/flags.make
 
-CMakeFiles/venus.dir/test.cpp.o: CMakeFiles/venus.dir/flags.make
-CMakeFiles/venus.dir/test.cpp.o: ../test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wesley/Workspace/venus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/venus.dir/test.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/venus.dir/test.cpp.o -c /home/wesley/Workspace/venus/test.cpp
+CMakeFiles/venus.dir/test.c.o: CMakeFiles/venus.dir/flags.make
+CMakeFiles/venus.dir/test.c.o: ../test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wesley/Workspace/venus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/venus.dir/test.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/venus.dir/test.c.o   -c /home/wesley/Workspace/venus/test.c
 
-CMakeFiles/venus.dir/test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/venus.dir/test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wesley/Workspace/venus/test.cpp > CMakeFiles/venus.dir/test.cpp.i
+CMakeFiles/venus.dir/test.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/venus.dir/test.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wesley/Workspace/venus/test.c > CMakeFiles/venus.dir/test.c.i
 
-CMakeFiles/venus.dir/test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/venus.dir/test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wesley/Workspace/venus/test.cpp -o CMakeFiles/venus.dir/test.cpp.s
+CMakeFiles/venus.dir/test.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/venus.dir/test.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wesley/Workspace/venus/test.c -o CMakeFiles/venus.dir/test.c.s
 
-CMakeFiles/venus.dir/test.cpp.o.requires:
+CMakeFiles/venus.dir/test.c.o.requires:
 
-.PHONY : CMakeFiles/venus.dir/test.cpp.o.requires
+.PHONY : CMakeFiles/venus.dir/test.c.o.requires
 
-CMakeFiles/venus.dir/test.cpp.o.provides: CMakeFiles/venus.dir/test.cpp.o.requires
-	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/test.cpp.o.provides.build
-.PHONY : CMakeFiles/venus.dir/test.cpp.o.provides
+CMakeFiles/venus.dir/test.c.o.provides: CMakeFiles/venus.dir/test.c.o.requires
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/test.c.o.provides.build
+.PHONY : CMakeFiles/venus.dir/test.c.o.provides
 
-CMakeFiles/venus.dir/test.cpp.o.provides.build: CMakeFiles/venus.dir/test.cpp.o
+CMakeFiles/venus.dir/test.c.o.provides.build: CMakeFiles/venus.dir/test.c.o
 
 
-CMakeFiles/venus.dir/src/vwindow.cpp.o: CMakeFiles/venus.dir/flags.make
-CMakeFiles/venus.dir/src/vwindow.cpp.o: ../src/vwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wesley/Workspace/venus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/venus.dir/src/vwindow.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/venus.dir/src/vwindow.cpp.o -c /home/wesley/Workspace/venus/src/vwindow.cpp
+CMakeFiles/venus.dir/src/window.c.o: CMakeFiles/venus.dir/flags.make
+CMakeFiles/venus.dir/src/window.c.o: ../src/window.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wesley/Workspace/venus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/venus.dir/src/window.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/venus.dir/src/window.c.o   -c /home/wesley/Workspace/venus/src/window.c
 
-CMakeFiles/venus.dir/src/vwindow.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/venus.dir/src/vwindow.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wesley/Workspace/venus/src/vwindow.cpp > CMakeFiles/venus.dir/src/vwindow.cpp.i
+CMakeFiles/venus.dir/src/window.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/venus.dir/src/window.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wesley/Workspace/venus/src/window.c > CMakeFiles/venus.dir/src/window.c.i
 
-CMakeFiles/venus.dir/src/vwindow.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/venus.dir/src/vwindow.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wesley/Workspace/venus/src/vwindow.cpp -o CMakeFiles/venus.dir/src/vwindow.cpp.s
+CMakeFiles/venus.dir/src/window.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/venus.dir/src/window.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wesley/Workspace/venus/src/window.c -o CMakeFiles/venus.dir/src/window.c.s
 
-CMakeFiles/venus.dir/src/vwindow.cpp.o.requires:
+CMakeFiles/venus.dir/src/window.c.o.requires:
 
-.PHONY : CMakeFiles/venus.dir/src/vwindow.cpp.o.requires
+.PHONY : CMakeFiles/venus.dir/src/window.c.o.requires
 
-CMakeFiles/venus.dir/src/vwindow.cpp.o.provides: CMakeFiles/venus.dir/src/vwindow.cpp.o.requires
-	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/vwindow.cpp.o.provides.build
-.PHONY : CMakeFiles/venus.dir/src/vwindow.cpp.o.provides
+CMakeFiles/venus.dir/src/window.c.o.provides: CMakeFiles/venus.dir/src/window.c.o.requires
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/window.c.o.provides.build
+.PHONY : CMakeFiles/venus.dir/src/window.c.o.provides
 
-CMakeFiles/venus.dir/src/vwindow.cpp.o.provides.build: CMakeFiles/venus.dir/src/vwindow.cpp.o
+CMakeFiles/venus.dir/src/window.c.o.provides.build: CMakeFiles/venus.dir/src/window.c.o
+
+
+CMakeFiles/venus.dir/src/util/matrix.c.o: CMakeFiles/venus.dir/flags.make
+CMakeFiles/venus.dir/src/util/matrix.c.o: ../src/util/matrix.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wesley/Workspace/venus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/venus.dir/src/util/matrix.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/venus.dir/src/util/matrix.c.o   -c /home/wesley/Workspace/venus/src/util/matrix.c
+
+CMakeFiles/venus.dir/src/util/matrix.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/venus.dir/src/util/matrix.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wesley/Workspace/venus/src/util/matrix.c > CMakeFiles/venus.dir/src/util/matrix.c.i
+
+CMakeFiles/venus.dir/src/util/matrix.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/venus.dir/src/util/matrix.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wesley/Workspace/venus/src/util/matrix.c -o CMakeFiles/venus.dir/src/util/matrix.c.s
+
+CMakeFiles/venus.dir/src/util/matrix.c.o.requires:
+
+.PHONY : CMakeFiles/venus.dir/src/util/matrix.c.o.requires
+
+CMakeFiles/venus.dir/src/util/matrix.c.o.provides: CMakeFiles/venus.dir/src/util/matrix.c.o.requires
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/util/matrix.c.o.provides.build
+.PHONY : CMakeFiles/venus.dir/src/util/matrix.c.o.provides
+
+CMakeFiles/venus.dir/src/util/matrix.c.o.provides.build: CMakeFiles/venus.dir/src/util/matrix.c.o
+
+
+CMakeFiles/venus.dir/src/util/vector.c.o: CMakeFiles/venus.dir/flags.make
+CMakeFiles/venus.dir/src/util/vector.c.o: ../src/util/vector.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wesley/Workspace/venus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/venus.dir/src/util/vector.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/venus.dir/src/util/vector.c.o   -c /home/wesley/Workspace/venus/src/util/vector.c
+
+CMakeFiles/venus.dir/src/util/vector.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/venus.dir/src/util/vector.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wesley/Workspace/venus/src/util/vector.c > CMakeFiles/venus.dir/src/util/vector.c.i
+
+CMakeFiles/venus.dir/src/util/vector.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/venus.dir/src/util/vector.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wesley/Workspace/venus/src/util/vector.c -o CMakeFiles/venus.dir/src/util/vector.c.s
+
+CMakeFiles/venus.dir/src/util/vector.c.o.requires:
+
+.PHONY : CMakeFiles/venus.dir/src/util/vector.c.o.requires
+
+CMakeFiles/venus.dir/src/util/vector.c.o.provides: CMakeFiles/venus.dir/src/util/vector.c.o.requires
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/util/vector.c.o.provides.build
+.PHONY : CMakeFiles/venus.dir/src/util/vector.c.o.provides
+
+CMakeFiles/venus.dir/src/util/vector.c.o.provides.build: CMakeFiles/venus.dir/src/util/vector.c.o
+
+
+CMakeFiles/venus.dir/.glad.c.o: CMakeFiles/venus.dir/flags.make
+CMakeFiles/venus.dir/.glad.c.o: ../.glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wesley/Workspace/venus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/venus.dir/.glad.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/venus.dir/.glad.c.o   -c /home/wesley/Workspace/venus/.glad.c
+
+CMakeFiles/venus.dir/.glad.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/venus.dir/.glad.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/wesley/Workspace/venus/.glad.c > CMakeFiles/venus.dir/.glad.c.i
+
+CMakeFiles/venus.dir/.glad.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/venus.dir/.glad.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/wesley/Workspace/venus/.glad.c -o CMakeFiles/venus.dir/.glad.c.s
+
+CMakeFiles/venus.dir/.glad.c.o.requires:
+
+.PHONY : CMakeFiles/venus.dir/.glad.c.o.requires
+
+CMakeFiles/venus.dir/.glad.c.o.provides: CMakeFiles/venus.dir/.glad.c.o.requires
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/.glad.c.o.provides.build
+.PHONY : CMakeFiles/venus.dir/.glad.c.o.provides
+
+CMakeFiles/venus.dir/.glad.c.o.provides.build: CMakeFiles/venus.dir/.glad.c.o
 
 
 # Object files for target venus
 venus_OBJECTS = \
-"CMakeFiles/venus.dir/test.cpp.o" \
-"CMakeFiles/venus.dir/src/vwindow.cpp.o"
+"CMakeFiles/venus.dir/test.c.o" \
+"CMakeFiles/venus.dir/src/window.c.o" \
+"CMakeFiles/venus.dir/src/util/matrix.c.o" \
+"CMakeFiles/venus.dir/src/util/vector.c.o" \
+"CMakeFiles/venus.dir/.glad.c.o"
 
 # External object files for target venus
 venus_EXTERNAL_OBJECTS =
 
-venus: CMakeFiles/venus.dir/test.cpp.o
-venus: CMakeFiles/venus.dir/src/vwindow.cpp.o
+venus: CMakeFiles/venus.dir/test.c.o
+venus: CMakeFiles/venus.dir/src/window.c.o
+venus: CMakeFiles/venus.dir/src/util/matrix.c.o
+venus: CMakeFiles/venus.dir/src/util/vector.c.o
+venus: CMakeFiles/venus.dir/.glad.c.o
 venus: CMakeFiles/venus.dir/build.make
 venus: CMakeFiles/venus.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wesley/Workspace/venus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable venus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wesley/Workspace/venus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable venus"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/venus.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -125,8 +203,11 @@ CMakeFiles/venus.dir/build: venus
 
 .PHONY : CMakeFiles/venus.dir/build
 
-CMakeFiles/venus.dir/requires: CMakeFiles/venus.dir/test.cpp.o.requires
-CMakeFiles/venus.dir/requires: CMakeFiles/venus.dir/src/vwindow.cpp.o.requires
+CMakeFiles/venus.dir/requires: CMakeFiles/venus.dir/test.c.o.requires
+CMakeFiles/venus.dir/requires: CMakeFiles/venus.dir/src/window.c.o.requires
+CMakeFiles/venus.dir/requires: CMakeFiles/venus.dir/src/util/matrix.c.o.requires
+CMakeFiles/venus.dir/requires: CMakeFiles/venus.dir/src/util/vector.c.o.requires
+CMakeFiles/venus.dir/requires: CMakeFiles/venus.dir/.glad.c.o.requires
 
 .PHONY : CMakeFiles/venus.dir/requires
 

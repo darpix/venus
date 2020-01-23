@@ -169,59 +169,140 @@ venus/fast:
 	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/build
 .PHONY : venus/fast
 
-src/vwindow.o: src/vwindow.cpp.o
+.glad.o: .glad.c.o
 
-.PHONY : src/vwindow.o
+.PHONY : .glad.o
 
 # target to build an object file
-src/vwindow.cpp.o:
-	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/vwindow.cpp.o
-.PHONY : src/vwindow.cpp.o
+.glad.c.o:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/.glad.c.o
+.PHONY : .glad.c.o
 
-src/vwindow.i: src/vwindow.cpp.i
+.glad.i: .glad.c.i
 
-.PHONY : src/vwindow.i
+.PHONY : .glad.i
 
 # target to preprocess a source file
-src/vwindow.cpp.i:
-	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/vwindow.cpp.i
-.PHONY : src/vwindow.cpp.i
+.glad.c.i:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/.glad.c.i
+.PHONY : .glad.c.i
 
-src/vwindow.s: src/vwindow.cpp.s
+.glad.s: .glad.c.s
 
-.PHONY : src/vwindow.s
+.PHONY : .glad.s
 
 # target to generate assembly for a file
-src/vwindow.cpp.s:
-	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/vwindow.cpp.s
-.PHONY : src/vwindow.cpp.s
+.glad.c.s:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/.glad.c.s
+.PHONY : .glad.c.s
 
-test.o: test.cpp.o
+src/util/matrix.o: src/util/matrix.c.o
+
+.PHONY : src/util/matrix.o
+
+# target to build an object file
+src/util/matrix.c.o:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/util/matrix.c.o
+.PHONY : src/util/matrix.c.o
+
+src/util/matrix.i: src/util/matrix.c.i
+
+.PHONY : src/util/matrix.i
+
+# target to preprocess a source file
+src/util/matrix.c.i:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/util/matrix.c.i
+.PHONY : src/util/matrix.c.i
+
+src/util/matrix.s: src/util/matrix.c.s
+
+.PHONY : src/util/matrix.s
+
+# target to generate assembly for a file
+src/util/matrix.c.s:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/util/matrix.c.s
+.PHONY : src/util/matrix.c.s
+
+src/util/vector.o: src/util/vector.c.o
+
+.PHONY : src/util/vector.o
+
+# target to build an object file
+src/util/vector.c.o:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/util/vector.c.o
+.PHONY : src/util/vector.c.o
+
+src/util/vector.i: src/util/vector.c.i
+
+.PHONY : src/util/vector.i
+
+# target to preprocess a source file
+src/util/vector.c.i:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/util/vector.c.i
+.PHONY : src/util/vector.c.i
+
+src/util/vector.s: src/util/vector.c.s
+
+.PHONY : src/util/vector.s
+
+# target to generate assembly for a file
+src/util/vector.c.s:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/util/vector.c.s
+.PHONY : src/util/vector.c.s
+
+src/window.o: src/window.c.o
+
+.PHONY : src/window.o
+
+# target to build an object file
+src/window.c.o:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/window.c.o
+.PHONY : src/window.c.o
+
+src/window.i: src/window.c.i
+
+.PHONY : src/window.i
+
+# target to preprocess a source file
+src/window.c.i:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/window.c.i
+.PHONY : src/window.c.i
+
+src/window.s: src/window.c.s
+
+.PHONY : src/window.s
+
+# target to generate assembly for a file
+src/window.c.s:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/window.c.s
+.PHONY : src/window.c.s
+
+test.o: test.c.o
 
 .PHONY : test.o
 
 # target to build an object file
-test.cpp.o:
-	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/test.cpp.o
-.PHONY : test.cpp.o
+test.c.o:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/test.c.o
+.PHONY : test.c.o
 
-test.i: test.cpp.i
+test.i: test.c.i
 
 .PHONY : test.i
 
 # target to preprocess a source file
-test.cpp.i:
-	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/test.cpp.i
-.PHONY : test.cpp.i
+test.c.i:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/test.c.i
+.PHONY : test.c.i
 
-test.s: test.cpp.s
+test.s: test.c.s
 
 .PHONY : test.s
 
 # target to generate assembly for a file
-test.cpp.s:
-	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/test.cpp.s
-.PHONY : test.cpp.s
+test.c.s:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/test.c.s
+.PHONY : test.c.s
 
 # Help Target
 help:
@@ -236,9 +317,18 @@ help:
 	@echo "... install/local"
 	@echo "... rebuild_cache"
 	@echo "... install"
-	@echo "... src/vwindow.o"
-	@echo "... src/vwindow.i"
-	@echo "... src/vwindow.s"
+	@echo "... .glad.o"
+	@echo "... .glad.i"
+	@echo "... .glad.s"
+	@echo "... src/util/matrix.o"
+	@echo "... src/util/matrix.i"
+	@echo "... src/util/matrix.s"
+	@echo "... src/util/vector.o"
+	@echo "... src/util/vector.i"
+	@echo "... src/util/vector.s"
+	@echo "... src/window.o"
+	@echo "... src/window.i"
+	@echo "... src/window.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"
