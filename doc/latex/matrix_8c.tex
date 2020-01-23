@@ -1,0 +1,50 @@
+\hypertarget{matrix_8c}{}\section{util/matrix.c File Reference}
+\label{matrix_8c}\index{util/matrix.\+c@{util/matrix.\+c}}
+{\ttfamily \#include \char`\"{}matrix.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../venus\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$memory.\+h$>$}\newline
+Include dependency graph for matrix.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrix_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{matrix_8c_aa5051f95897c098f254782851412bed7}\label{matrix_8c_aa5051f95897c098f254782851412bed7}} 
+int {\bfseries check\+\_\+matrix\+\_\+size} (\hyperlink{structmatrix}{matrix} $\ast$mat0, \hyperlink{structmatrix}{matrix} $\ast$mat1)
+\item 
+\mbox{\Hypertarget{matrix_8c_a87b07bd837d135d2b135b80e1e938d58}\label{matrix_8c_a87b07bd837d135d2b135b80e1e938d58}} 
+\hyperlink{structmatrix}{matrix} {\bfseries create\+\_\+matrix} (unsigned rows, unsigned columns)
+\item 
+\mbox{\Hypertarget{matrix_8c_a64f71ab93eed506021b09bc6d2dfe019}\label{matrix_8c_a64f71ab93eed506021b09bc6d2dfe019}} 
+void {\bfseries resize\+\_\+matrix} (\hyperlink{structmatrix}{matrix} $\ast$matrix0, unsigned new\+\_\+rows, unsigned new\+\_\+columns)
+\item 
+\mbox{\Hypertarget{matrix_8c_a2c03755da83185ee7f4203905db3a53d}\label{matrix_8c_a2c03755da83185ee7f4203905db3a53d}} 
+int {\bfseries format\+\_\+matrix} (\hyperlink{structmatrix}{matrix} $\ast$mat, \hyperlink{structmatrix}{matrix} $\ast$format)
+\item 
+\mbox{\Hypertarget{matrix_8c_ad60d2628e1285f8eada6ae607bd4149d}\label{matrix_8c_ad60d2628e1285f8eada6ae607bd4149d}} 
+int {\bfseries matrix\+\_\+copy} (\hyperlink{structmatrix}{matrix} $\ast$destination, \hyperlink{structmatrix}{matrix} $\ast$source)
+\item 
+\mbox{\Hypertarget{matrix_8c_a667c88bd2498eb84d397f1db46c96479}\label{matrix_8c_a667c88bd2498eb84d397f1db46c96479}} 
+int {\bfseries matrix\+\_\+negate} (\hyperlink{structmatrix}{matrix} $\ast$destination, \hyperlink{structmatrix}{matrix} $\ast$source)
+\item 
+\mbox{\Hypertarget{matrix_8c_acfec626349aa6e65c7207bc48f7ea60e}\label{matrix_8c_acfec626349aa6e65c7207bc48f7ea60e}} 
+int {\bfseries matrix\+\_\+add} (\hyperlink{structmatrix}{matrix} $\ast$destination, \hyperlink{structmatrix}{matrix} $\ast$source0, \hyperlink{structmatrix}{matrix} $\ast$source1)
+\item 
+\mbox{\Hypertarget{matrix_8c_a8dbe07e7f678d239299e1acd7ad02894}\label{matrix_8c_a8dbe07e7f678d239299e1acd7ad02894}} 
+int {\bfseries matrix\+\_\+subtract} (\hyperlink{structmatrix}{matrix} $\ast$destination, \hyperlink{structmatrix}{matrix} $\ast$source0, \hyperlink{structmatrix}{matrix} $\ast$source1)
+\item 
+\mbox{\Hypertarget{matrix_8c_adb975525d21611c7a3a7f4e1eb4abb3e}\label{matrix_8c_adb975525d21611c7a3a7f4e1eb4abb3e}} 
+int {\bfseries matrix\+\_\+multiply\+\_\+scalar} (\hyperlink{structmatrix}{matrix} $\ast$destination, \hyperlink{structmatrix}{matrix} $\ast$source, float scalar)
+\item 
+\mbox{\Hypertarget{matrix_8c_a9438c6eb7ff5cfc8b3b63e8deafc9b6f}\label{matrix_8c_a9438c6eb7ff5cfc8b3b63e8deafc9b6f}} 
+int {\bfseries matrix\+\_\+transpose} (\hyperlink{structmatrix}{matrix} $\ast$destination, \hyperlink{structmatrix}{matrix} $\ast$source)
+\item 
+\mbox{\Hypertarget{matrix_8c_a2bb840b7553796e6fcd091d5c7d32c3b}\label{matrix_8c_a2bb840b7553796e6fcd091d5c7d32c3b}} 
+void {\bfseries print\+\_\+matrix} (\hyperlink{structmatrix}{matrix} $\ast$mat)
+\end{DoxyCompactItemize}
