@@ -7,7 +7,6 @@
  * @file window.h
  */
 
-#pragma once
 #ifndef VS_WINDOW_H
 #define VS_WINDOW_H
 
@@ -15,6 +14,7 @@
 
 typedef unsigned long __x_win;
 typedef struct __GLXcontextRec *__glx_context;
+typedef struct XVisualInfo __xvisual_info;
 
 /**
  * @brief Structure that contains the basic building blocks for each venus window.
@@ -32,6 +32,9 @@ typedef struct {
 	
 	/// Pointer to the window's unique GLXContext
 	__glx_context *context;
+	
+	// The visual info
+	__xvisual_info info;
 	
 	/// The actual window
 	__x_win xwin;
@@ -69,6 +72,15 @@ int venus_terminate();
 int create_window(window *win);
 
 /**
+ * @brief Destroys a window
+ * 
+ * You should always destroy any window you create in order to ensure that no memory is leaked.
+ * 
+ * @Return Returns an error code.
+ */
+int destroy_window(window *win);
+
+/**
  * @brief Shows a window
  * 
  * This requests X to "map" the window
@@ -94,5 +106,10 @@ int hide(window *win);
  * @return Returns an error code
  */
 int flush();
+
+/**
+ * @brief Starts the event loop for any associated venus windows
+ */
+void venus_begin_loop();
 
 #endif

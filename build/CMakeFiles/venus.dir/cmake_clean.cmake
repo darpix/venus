@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/venus.dir/test.c.o"
   "CMakeFiles/venus.dir/src/window.c.o"
-  "CMakeFiles/venus.dir/src/util/matrix.c.o"
-  "CMakeFiles/venus.dir/src/util/vector.c.o"
   "CMakeFiles/venus.dir/.glad.c.o"
   "venus.pdb"
   "venus"

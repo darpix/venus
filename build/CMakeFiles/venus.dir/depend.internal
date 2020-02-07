@@ -3,22 +3,12 @@
 
 CMakeFiles/venus.dir/.glad.c.o
  /home/wesley/Workspace/venus/.glad.c
-CMakeFiles/venus.dir/src/util/matrix.c.o
- /home/wesley/Workspace/venus/src/util/matrix.c
- /home/wesley/Workspace/venus/src/util/matrix.h
- /home/wesley/Workspace/venus/src/util/vector.h
- /home/wesley/Workspace/venus/src/venus_common.h
-CMakeFiles/venus.dir/src/util/vector.c.o
- /home/wesley/Workspace/venus/src/util/vector.c
- /home/wesley/Workspace/venus/src/util/vector.h
 CMakeFiles/venus.dir/src/window.c.o
  /home/wesley/Workspace/venus/src/venus.h
  /home/wesley/Workspace/venus/src/venus_common.h
  /home/wesley/Workspace/venus/src/window.c
  /home/wesley/Workspace/venus/src/window.h
 CMakeFiles/venus.dir/test.c.o
- /home/wesley/Workspace/venus/src/util/matrix.h
- /home/wesley/Workspace/venus/src/util/vector.h
  /home/wesley/Workspace/venus/src/venus.h
  /home/wesley/Workspace/venus/src/venus_common.h
  /home/wesley/Workspace/venus/src/window.h

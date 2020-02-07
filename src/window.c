@@ -15,9 +15,9 @@
  * have the opportunity to write code for Macs
  */
 
-// This option should really be set in the compiler options but this works just as well for now
+/* This option should really be set in the compiler options but this works just as well for now
 #define VS_COMPILE_LINUX
-#ifdef VS_COMPILE_LINUX
+#ifdef VS_COMPILE_LINUX*/
 
 /*
  * https://github.com/Dav1dde/glad
@@ -79,7 +79,14 @@ int venus_initialize() {
 	zlog_info(g_log, "Connected to display");
 }
 
+int destroy_window(window *win) {
+	glXDestroyContext(g_display, *win->context);
+	XDestroyWindow(g_display, win->xwin);
+}
+
 int venus_terminate() {
+	XCloseDisplay(g_display);
+	
 	zlog_info(g_log, "End");
 	zlog_fini();
 }
@@ -130,8 +137,6 @@ int create_window(window *win) {
 	glXMakeCurrent(g_display, win->xwin, *(win->context));
 	
 	if (!GLVersion.major) {
-		// Venus is written to use OpenGL. If OpenGL doesn't work, we're screwed.
-		
 		if (!gladLoadGL()) {
 			zlog_fatal(g_log, "Failed to load OpenGL");
 			return VS_FAIL_GL_NOT_LOADED;
@@ -155,4 +160,8 @@ int flush() {
 	return XFlush(g_display);
 }
 
-#endif
+void venus_begin_loop() {
+	
+}
+
+/*#endif*/

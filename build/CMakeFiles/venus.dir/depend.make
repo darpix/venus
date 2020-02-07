@@ -3,21 +3,11 @@
 
 CMakeFiles/venus.dir/.glad.c.o: ../.glad.c
 
-CMakeFiles/venus.dir/src/util/matrix.c.o: ../src/util/matrix.c
-CMakeFiles/venus.dir/src/util/matrix.c.o: ../src/util/matrix.h
-CMakeFiles/venus.dir/src/util/matrix.c.o: ../src/util/vector.h
-CMakeFiles/venus.dir/src/util/matrix.c.o: ../src/venus_common.h
-
-CMakeFiles/venus.dir/src/util/vector.c.o: ../src/util/vector.c
-CMakeFiles/venus.dir/src/util/vector.c.o: ../src/util/vector.h
-
 CMakeFiles/venus.dir/src/window.c.o: ../src/venus.h
 CMakeFiles/venus.dir/src/window.c.o: ../src/venus_common.h
 CMakeFiles/venus.dir/src/window.c.o: ../src/window.c
 CMakeFiles/venus.dir/src/window.c.o: ../src/window.h
 
-CMakeFiles/venus.dir/test.c.o: ../src/util/matrix.h
-CMakeFiles/venus.dir/test.c.o: ../src/util/vector.h
 CMakeFiles/venus.dir/test.c.o: ../src/venus.h
 CMakeFiles/venus.dir/test.c.o: ../src/venus_common.h
 CMakeFiles/venus.dir/test.c.o: ../src/window.h

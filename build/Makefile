@@ -196,60 +196,6 @@ venus/fast:
 	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/.glad.c.s
 .PHONY : .glad.c.s
 
-src/util/matrix.o: src/util/matrix.c.o
-
-.PHONY : src/util/matrix.o
-
-# target to build an object file
-src/util/matrix.c.o:
-	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/util/matrix.c.o
-.PHONY : src/util/matrix.c.o
-
-src/util/matrix.i: src/util/matrix.c.i
-
-.PHONY : src/util/matrix.i
-
-# target to preprocess a source file
-src/util/matrix.c.i:
-	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/util/matrix.c.i
-.PHONY : src/util/matrix.c.i
-
-src/util/matrix.s: src/util/matrix.c.s
-
-.PHONY : src/util/matrix.s
-
-# target to generate assembly for a file
-src/util/matrix.c.s:
-	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/util/matrix.c.s
-.PHONY : src/util/matrix.c.s
-
-src/util/vector.o: src/util/vector.c.o
-
-.PHONY : src/util/vector.o
-
-# target to build an object file
-src/util/vector.c.o:
-	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/util/vector.c.o
-.PHONY : src/util/vector.c.o
-
-src/util/vector.i: src/util/vector.c.i
-
-.PHONY : src/util/vector.i
-
-# target to preprocess a source file
-src/util/vector.c.i:
-	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/util/vector.c.i
-.PHONY : src/util/vector.c.i
-
-src/util/vector.s: src/util/vector.c.s
-
-.PHONY : src/util/vector.s
-
-# target to generate assembly for a file
-src/util/vector.c.s:
-	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/util/vector.c.s
-.PHONY : src/util/vector.c.s
-
 src/window.o: src/window.c.o
 
 .PHONY : src/window.o
@@ -320,12 +266,6 @@ help:
 	@echo "... .glad.o"
 	@echo "... .glad.i"
 	@echo "... .glad.s"
-	@echo "... src/util/matrix.o"
-	@echo "... src/util/matrix.i"
-	@echo "... src/util/matrix.s"
-	@echo "... src/util/vector.o"
-	@echo "... src/util/vector.i"
-	@echo "... src/util/vector.s"
 	@echo "... src/window.o"
 	@echo "... src/window.i"
 	@echo "... src/window.s"

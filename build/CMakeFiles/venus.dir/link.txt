@@ -1,1 +1,1 @@
-/usr/bin/cc -g  -rdynamic CMakeFiles/venus.dir/test.c.o CMakeFiles/venus.dir/src/window.c.o CMakeFiles/venus.dir/src/util/matrix.c.o CMakeFiles/venus.dir/src/util/vector.c.o CMakeFiles/venus.dir/.glad.c.o  -o venus -lGL -lX11 -ldl -lpthread -lXrandr -lpng -lSOIL -lglfw -lzlog 
+/usr/bin/cc -g  -rdynamic CMakeFiles/venus.dir/test.c.o CMakeFiles/venus.dir/src/window.c.o CMakeFiles/venus.dir/.glad.c.o  -o venus -lGL -lX11 -ldl -lpthread -lXrandr -lpng -lSOIL -lglfw -lzlog 

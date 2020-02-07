@@ -5,8 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/wesley/Workspace/venus/.glad.c" "/home/wesley/Workspace/venus/build/CMakeFiles/venus.dir/.glad.c.o"
-  "/home/wesley/Workspace/venus/src/util/matrix.c" "/home/wesley/Workspace/venus/build/CMakeFiles/venus.dir/src/util/matrix.c.o"
-  "/home/wesley/Workspace/venus/src/util/vector.c" "/home/wesley/Workspace/venus/build/CMakeFiles/venus.dir/src/util/vector.c.o"
   "/home/wesley/Workspace/venus/src/window.c" "/home/wesley/Workspace/venus/build/CMakeFiles/venus.dir/src/window.c.o"
   "/home/wesley/Workspace/venus/test.c" "/home/wesley/Workspace/venus/build/CMakeFiles/venus.dir/test.c.o"
   )
