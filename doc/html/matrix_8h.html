@@ -65,38 +65,23 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">matrix.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="vector_8h_source.html">vector.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for matrix.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="matrix_8h__incl.png" border="0" usemap="#util_2matrix_8h" alt=""/></div>
-<map name="util_2matrix_8h" id="util_2matrix_8h">
-<area shape="rect" id="node2" href="vector_8h.html" title="vector.h" alt="" coords="16,80,85,107"/>
-</map>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="matrix_8h__dep__incl.png" border="0" usemap="#util_2matrix_8hdep" alt=""/></div>
-<map name="util_2matrix_8hdep" id="util_2matrix_8hdep">
-<area shape="rect" id="node2" href="matrix_8c.html" title="util/matrix.c" alt="" coords="5,80,96,107"/>
-</map>
 </div>
 </div>
 <p><a href="matrix_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmatrix.html">matrix</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a69d543f0ecb517b2913fde69011b5c15"><td class="memItemLeft" align="right" valign="top"><a id="a69d543f0ecb517b2913fde69011b5c15"></a>
@@ -105,41 +90,28 @@ Macros</h2></td></tr>
 <tr class="memitem:a7ac9faf7957b591b5e7d16d100d783a6"><td class="memItemLeft" align="right" valign="top"><a id="a7ac9faf7957b591b5e7d16d100d783a6"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_MATRIX_COLUMN</b>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:a7ac9faf7957b591b5e7d16d100d783a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1a9a4d466b195421b15d4c1f45e0779"><td class="memItemLeft" align="right" valign="top"><a id="ad1a9a4d466b195421b15d4c1f45e0779"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_DEFINE_MATRIX</b>(TYPE,  NAME)</td></tr>
+<tr class="separator:ad1a9a4d466b195421b15d4c1f45e0779"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a87b07bd837d135d2b135b80e1e938d58"><td class="memItemLeft" align="right" valign="top"><a id="a87b07bd837d135d2b135b80e1e938d58"></a>
-<a class="el" href="structmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>create_matrix</b> (unsigned rows, unsigned columns)</td></tr>
-<tr class="separator:a87b07bd837d135d2b135b80e1e938d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64f71ab93eed506021b09bc6d2dfe019"><td class="memItemLeft" align="right" valign="top"><a id="a64f71ab93eed506021b09bc6d2dfe019"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>resize_matrix</b> (<a class="el" href="structmatrix.html">matrix</a> *matrix0, unsigned new_rows, unsigned new_columns)</td></tr>
-<tr class="separator:a64f71ab93eed506021b09bc6d2dfe019"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfec626349aa6e65c7207bc48f7ea60e"><td class="memItemLeft" align="right" valign="top"><a id="acfec626349aa6e65c7207bc48f7ea60e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_add</b> (<a class="el" href="structmatrix.html">matrix</a> *destination, <a class="el" href="structmatrix.html">matrix</a> *source0, <a class="el" href="structmatrix.html">matrix</a> *source1)</td></tr>
-<tr class="separator:acfec626349aa6e65c7207bc48f7ea60e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b3f013e5e266c6cc525447af3f64f4f"><td class="memItemLeft" align="right" valign="top"><a id="a6b3f013e5e266c6cc525447af3f64f4f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_multiply</b> (<a class="el" href="structmatrix.html">matrix</a> *destination, <a class="el" href="structmatrix.html">matrix</a> *source0, <a class="el" href="structmatrix.html">matrix</a> *source1)</td></tr>
-<tr class="separator:a6b3f013e5e266c6cc525447af3f64f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad60d2628e1285f8eada6ae607bd4149d"><td class="memItemLeft" align="right" valign="top"><a id="ad60d2628e1285f8eada6ae607bd4149d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_copy</b> (<a class="el" href="structmatrix.html">matrix</a> *destination, <a class="el" href="structmatrix.html">matrix</a> *source)</td></tr>
-<tr class="separator:ad60d2628e1285f8eada6ae607bd4149d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dbe07e7f678d239299e1acd7ad02894"><td class="memItemLeft" align="right" valign="top"><a id="a8dbe07e7f678d239299e1acd7ad02894"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_subtract</b> (<a class="el" href="structmatrix.html">matrix</a> *destination, <a class="el" href="structmatrix.html">matrix</a> *source0, <a class="el" href="structmatrix.html">matrix</a> *source1)</td></tr>
-<tr class="separator:a8dbe07e7f678d239299e1acd7ad02894"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb975525d21611c7a3a7f4e1eb4abb3e"><td class="memItemLeft" align="right" valign="top"><a id="adb975525d21611c7a3a7f4e1eb4abb3e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_multiply_scalar</b> (<a class="el" href="structmatrix.html">matrix</a> *destination, <a class="el" href="structmatrix.html">matrix</a> *source, float scalar)</td></tr>
-<tr class="separator:adb975525d21611c7a3a7f4e1eb4abb3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9438c6eb7ff5cfc8b3b63e8deafc9b6f"><td class="memItemLeft" align="right" valign="top"><a id="a9438c6eb7ff5cfc8b3b63e8deafc9b6f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_transpose</b> (<a class="el" href="structmatrix.html">matrix</a> *destination, <a class="el" href="structmatrix.html">matrix</a> *source)</td></tr>
-<tr class="separator:a9438c6eb7ff5cfc8b3b63e8deafc9b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a667c88bd2498eb84d397f1db46c96479"><td class="memItemLeft" align="right" valign="top"><a id="a667c88bd2498eb84d397f1db46c96479"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_negate</b> (<a class="el" href="structmatrix.html">matrix</a> *destination, <a class="el" href="structmatrix.html">matrix</a> *source)</td></tr>
-<tr class="separator:a667c88bd2498eb84d397f1db46c96479"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bb840b7553796e6fcd091d5c7d32c3b"><td class="memItemLeft" align="right" valign="top"><a id="a2bb840b7553796e6fcd091d5c7d32c3b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>print_matrix</b> (<a class="el" href="structmatrix.html">matrix</a> *mat)</td></tr>
-<tr class="separator:a2bb840b7553796e6fcd091d5c7d32c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24400a6446d24fb1e6a04cd7b9726ea9"><td class="memItemLeft" align="right" valign="top"><a id="a24400a6446d24fb1e6a04cd7b9726ea9"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_rows</b> (void *mat)</td></tr>
+<tr class="separator:a24400a6446d24fb1e6a04cd7b9726ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1f29557617a9f2e51293c4f5b94067f"><td class="memItemLeft" align="right" valign="top"><a id="af1f29557617a9f2e51293c4f5b94067f"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_columns</b> (void *mat)</td></tr>
+<tr class="separator:af1f29557617a9f2e51293c4f5b94067f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f6fd93a922a8809082d5611b6343d80"><td class="memItemLeft" align="right" valign="top"><a id="a7f6fd93a922a8809082d5611b6343d80"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_size</b> (void *mat)</td></tr>
+<tr class="separator:a7f6fd93a922a8809082d5611b6343d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c790c31e7ef37d0990377ef82be2ec0"><td class="memItemLeft" align="right" valign="top"><a id="a8c790c31e7ef37d0990377ef82be2ec0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>matrix_delete</b> (void *mat)</td></tr>
+<tr class="separator:a8c790c31e7ef37d0990377ef82be2ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Venus Graphics Engine Copyright (C) 2020, Wesley Studt </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

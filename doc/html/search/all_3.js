@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['matrix',['matrix',['../structmatrix.html',1,'']]],
-  ['matrix_2ec',['matrix.c',['../matrix_8c.html',1,'']]],
-  ['matrix_2eh',['matrix.h',['../matrix_8h.html',1,'']]]
+  ['flush',['flush',['../window_8c.html#a6a97127a0760a0ca431456fd3fd5c087',1,'flush():&#160;window.c'],['../window_8h.html#a6a97127a0760a0ca431456fd3fd5c087',1,'flush():&#160;window.c']]]
 ];

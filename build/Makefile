@@ -169,32 +169,194 @@ venus/fast:
 	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/build
 .PHONY : venus/fast
 
-.glad.o: .glad.c.o
+glad.o: glad.c.o
 
-.PHONY : .glad.o
+.PHONY : glad.o
 
 # target to build an object file
-.glad.c.o:
-	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/.glad.c.o
-.PHONY : .glad.c.o
+glad.c.o:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/glad.c.o
+.PHONY : glad.c.o
 
-.glad.i: .glad.c.i
+glad.i: glad.c.i
 
-.PHONY : .glad.i
+.PHONY : glad.i
 
 # target to preprocess a source file
-.glad.c.i:
-	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/.glad.c.i
-.PHONY : .glad.c.i
+glad.c.i:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/glad.c.i
+.PHONY : glad.c.i
 
-.glad.s: .glad.c.s
+glad.s: glad.c.s
 
-.PHONY : .glad.s
+.PHONY : glad.s
 
 # target to generate assembly for a file
-.glad.c.s:
-	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/.glad.c.s
-.PHONY : .glad.c.s
+glad.c.s:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/glad.c.s
+.PHONY : glad.c.s
+
+src/engine/graphics.o: src/engine/graphics.c.o
+
+.PHONY : src/engine/graphics.o
+
+# target to build an object file
+src/engine/graphics.c.o:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/engine/graphics.c.o
+.PHONY : src/engine/graphics.c.o
+
+src/engine/graphics.i: src/engine/graphics.c.i
+
+.PHONY : src/engine/graphics.i
+
+# target to preprocess a source file
+src/engine/graphics.c.i:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/engine/graphics.c.i
+.PHONY : src/engine/graphics.c.i
+
+src/engine/graphics.s: src/engine/graphics.c.s
+
+.PHONY : src/engine/graphics.s
+
+# target to generate assembly for a file
+src/engine/graphics.c.s:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/engine/graphics.c.s
+.PHONY : src/engine/graphics.c.s
+
+src/toolkit/default_theme.o: src/toolkit/default_theme.c.o
+
+.PHONY : src/toolkit/default_theme.o
+
+# target to build an object file
+src/toolkit/default_theme.c.o:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/toolkit/default_theme.c.o
+.PHONY : src/toolkit/default_theme.c.o
+
+src/toolkit/default_theme.i: src/toolkit/default_theme.c.i
+
+.PHONY : src/toolkit/default_theme.i
+
+# target to preprocess a source file
+src/toolkit/default_theme.c.i:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/toolkit/default_theme.c.i
+.PHONY : src/toolkit/default_theme.c.i
+
+src/toolkit/default_theme.s: src/toolkit/default_theme.c.s
+
+.PHONY : src/toolkit/default_theme.s
+
+# target to generate assembly for a file
+src/toolkit/default_theme.c.s:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/toolkit/default_theme.c.s
+.PHONY : src/toolkit/default_theme.c.s
+
+src/toolkit/widget.o: src/toolkit/widget.c.o
+
+.PHONY : src/toolkit/widget.o
+
+# target to build an object file
+src/toolkit/widget.c.o:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/toolkit/widget.c.o
+.PHONY : src/toolkit/widget.c.o
+
+src/toolkit/widget.i: src/toolkit/widget.c.i
+
+.PHONY : src/toolkit/widget.i
+
+# target to preprocess a source file
+src/toolkit/widget.c.i:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/toolkit/widget.c.i
+.PHONY : src/toolkit/widget.c.i
+
+src/toolkit/widget.s: src/toolkit/widget.c.s
+
+.PHONY : src/toolkit/widget.s
+
+# target to generate assembly for a file
+src/toolkit/widget.c.s:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/toolkit/widget.c.s
+.PHONY : src/toolkit/widget.c.s
+
+src/toolkit/widgets/panel.o: src/toolkit/widgets/panel.c.o
+
+.PHONY : src/toolkit/widgets/panel.o
+
+# target to build an object file
+src/toolkit/widgets/panel.c.o:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/toolkit/widgets/panel.c.o
+.PHONY : src/toolkit/widgets/panel.c.o
+
+src/toolkit/widgets/panel.i: src/toolkit/widgets/panel.c.i
+
+.PHONY : src/toolkit/widgets/panel.i
+
+# target to preprocess a source file
+src/toolkit/widgets/panel.c.i:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/toolkit/widgets/panel.c.i
+.PHONY : src/toolkit/widgets/panel.c.i
+
+src/toolkit/widgets/panel.s: src/toolkit/widgets/panel.c.s
+
+.PHONY : src/toolkit/widgets/panel.s
+
+# target to generate assembly for a file
+src/toolkit/widgets/panel.c.s:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/toolkit/widgets/panel.c.s
+.PHONY : src/toolkit/widgets/panel.c.s
+
+src/toolkit/widgets/text_field.o: src/toolkit/widgets/text_field.c.o
+
+.PHONY : src/toolkit/widgets/text_field.o
+
+# target to build an object file
+src/toolkit/widgets/text_field.c.o:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/toolkit/widgets/text_field.c.o
+.PHONY : src/toolkit/widgets/text_field.c.o
+
+src/toolkit/widgets/text_field.i: src/toolkit/widgets/text_field.c.i
+
+.PHONY : src/toolkit/widgets/text_field.i
+
+# target to preprocess a source file
+src/toolkit/widgets/text_field.c.i:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/toolkit/widgets/text_field.c.i
+.PHONY : src/toolkit/widgets/text_field.c.i
+
+src/toolkit/widgets/text_field.s: src/toolkit/widgets/text_field.c.s
+
+.PHONY : src/toolkit/widgets/text_field.s
+
+# target to generate assembly for a file
+src/toolkit/widgets/text_field.c.s:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/toolkit/widgets/text_field.c.s
+.PHONY : src/toolkit/widgets/text_field.c.s
+
+src/util/types.o: src/util/types.c.o
+
+.PHONY : src/util/types.o
+
+# target to build an object file
+src/util/types.c.o:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/util/types.c.o
+.PHONY : src/util/types.c.o
+
+src/util/types.i: src/util/types.c.i
+
+.PHONY : src/util/types.i
+
+# target to preprocess a source file
+src/util/types.c.i:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/util/types.c.i
+.PHONY : src/util/types.c.i
+
+src/util/types.s: src/util/types.c.s
+
+.PHONY : src/util/types.s
+
+# target to generate assembly for a file
+src/util/types.c.s:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/util/types.c.s
+.PHONY : src/util/types.c.s
 
 src/window.o: src/window.c.o
 
@@ -263,9 +425,27 @@ help:
 	@echo "... install/local"
 	@echo "... rebuild_cache"
 	@echo "... install"
-	@echo "... .glad.o"
-	@echo "... .glad.i"
-	@echo "... .glad.s"
+	@echo "... glad.o"
+	@echo "... glad.i"
+	@echo "... glad.s"
+	@echo "... src/engine/graphics.o"
+	@echo "... src/engine/graphics.i"
+	@echo "... src/engine/graphics.s"
+	@echo "... src/toolkit/default_theme.o"
+	@echo "... src/toolkit/default_theme.i"
+	@echo "... src/toolkit/default_theme.s"
+	@echo "... src/toolkit/widget.o"
+	@echo "... src/toolkit/widget.i"
+	@echo "... src/toolkit/widget.s"
+	@echo "... src/toolkit/widgets/panel.o"
+	@echo "... src/toolkit/widgets/panel.i"
+	@echo "... src/toolkit/widgets/panel.s"
+	@echo "... src/toolkit/widgets/text_field.o"
+	@echo "... src/toolkit/widgets/text_field.i"
+	@echo "... src/toolkit/widgets/text_field.s"
+	@echo "... src/util/types.o"
+	@echo "... src/util/types.i"
+	@echo "... src/util/types.s"
 	@echo "... src/window.o"
 	@echo "... src/window.i"
 	@echo "... src/window.s"

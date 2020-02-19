@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hide',['hide',['../window_8c.html#a1739057d6d8077a7490b0467ea5d064b',1,'hide(window *win):&#160;window.c'],['../window_8h.html#a1739057d6d8077a7490b0467ea5d064b',1,'hide(window *win):&#160;window.c']]]
+  ['destroy_5fwindow',['destroy_window',['../window_8c.html#aa2ee2c8b10e2e4536bb4151990f48ac2',1,'destroy_window(window *win):&#160;window.c'],['../window_8h.html#aa2ee2c8b10e2e4536bb4151990f48ac2',1,'destroy_window(window *win):&#160;window.c']]]
 ];

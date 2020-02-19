@@ -1,5 +1,13 @@
 <map id="util/vector.h" name="util/vector.h">
-<area shape="rect" id="node2" href="$matrix_8h.html" title="util/matrix.h" alt="" coords="5,80,96,107"/>
-<area shape="rect" id="node4" href="$vector_8c.html" title="util/vector.c" alt="" coords="120,80,211,107"/>
-<area shape="rect" id="node3" href="$matrix_8c.html" title="util/matrix.c" alt="" coords="5,155,96,181"/>
+<area shape="rect" id="node2" href="$types_8h.html" title="Includes some basic types Venus Graphics Engine Copyright (C) 2020, Wesley Studt. ..." alt="" coords="422,80,509,107"/>
+<area shape="rect" id="node3" href="$window_8h.html" title="window.h" alt="" coords="373,155,451,181"/>
+<area shape="rect" id="node12" href="$types_8c.html" title="util/types.c" alt="" coords="475,155,562,181"/>
+<area shape="rect" id="node4" href="$graphics_8h.html" title="engine/graphics.h" alt="" coords="185,304,309,331"/>
+<area shape="rect" id="node6" href="$panel_8c.html" title="toolkit/widgets/panel.c" alt="" coords="5,386,157,413"/>
+<area shape="rect" id="node7" href="$text__field_8c.html" title="toolkit/widgets/text\l_field.c" alt="" coords="330,379,462,420"/>
+<area shape="rect" id="node8" href="$default__theme_8h.html" title="Headers for default Venus theme. " alt="" coords="449,229,604,256"/>
+<area shape="rect" id="node9" href="$default__theme_8c.html" title="The default theme for Venus and a good template to design new themes. " alt="" coords="487,386,641,413"/>
+<area shape="rect" id="node10" href="$theme_8h.html" title="Venus theme. " alt="" coords="402,304,510,331"/>
+<area shape="rect" id="node11" href="$window_8c.html" title="window.c" alt="" coords="665,386,743,413"/>
+<area shape="rect" id="node5" href="$graphics_8c.html" title="engine/graphics.c" alt="" coords="182,386,306,413"/>
 </map>

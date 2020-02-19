@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['height',['height',['../structwindow.html#a3fbcf84b22b22fff0eb213414871aad9',1,'window']]]
+  ['n_5fchildren',['n_children',['../structwindow.html#a9dcdf1cf06c0e60a6c897d1dad4e1db6',1,'window']]]
 ];

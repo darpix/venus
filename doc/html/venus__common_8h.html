@@ -78,8 +78,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="venus__common_8h__dep__incl.png" border="0" usemap="#venus__common_8hdep" alt=""/></div>
 <map name="venus__common_8hdep" id="venus__common_8hdep">
-<area shape="rect" id="node2" href="matrix_8c.html" title="util/matrix.c" alt="" coords="5,80,96,107"/>
-<area shape="rect" id="node3" href="window_8c.html" title="window.c" alt="" coords="120,80,197,107"/>
+<area shape="rect" id="node2" href="widget_8c.html" title="toolkit/widget.c" alt="" coords="5,87,116,114"/>
+<area shape="rect" id="node3" href="panel_8c.html" title="toolkit/widgets/panel.c" alt="" coords="141,87,293,114"/>
+<area shape="rect" id="node4" href="text__field_8c.html" title="toolkit/widgets/text\l_field.c" alt="" coords="317,80,449,121"/>
+<area shape="rect" id="node5" href="window_8c.html" title="window.c" alt="" coords="474,87,551,114"/>
 </map>
 </div>
 </div>
@@ -97,47 +99,50 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_TRUE</b>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:a708711345054c692bc1346bcb060c96b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a940ab0db9205f4237326a7b15b3d7ed1"><td class="memItemLeft" align="right" valign="top"><a id="a940ab0db9205f4237326a7b15b3d7ed1"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_SUCCESS</b>&#160;&#160;&#160;0x0001</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_SUCCESS</b>&#160;&#160;&#160;0x0000</td></tr>
 <tr class="separator:a940ab0db9205f4237326a7b15b3d7ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4f37fb879d6c26e7c44d5a1f291b91e"><td class="memItemLeft" align="right" valign="top"><a id="ab4f37fb879d6c26e7c44d5a1f291b91e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAILURE</b>&#160;&#160;&#160;0x0000</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAILURE</b>&#160;&#160;&#160;0x0001</td></tr>
 <tr class="separator:ab4f37fb879d6c26e7c44d5a1f291b91e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fc9cc7e10103de2f20b46a7a2c3be61"><td class="memItemLeft" align="right" valign="top"><a id="a1fc9cc7e10103de2f20b46a7a2c3be61"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_VENUS</b>&#160;&#160;&#160;0x3000</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_VENUS</b>&#160;&#160;&#160;0b0010000000000000000000000000000</td></tr>
 <tr class="separator:a1fc9cc7e10103de2f20b46a7a2c3be61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02d4af33f1ac6282ec5d915214f6dd45"><td class="memItemLeft" align="right" valign="top"><a id="a02d4af33f1ac6282ec5d915214f6dd45"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_VENUS_MATRIX_SIZE</b>&#160;&#160;&#160;0x3001</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_VENUS_MATRIX_SIZE</b>&#160;&#160;&#160;(0x0001 | VS_FAIL_VENUS)</td></tr>
 <tr class="separator:a02d4af33f1ac6282ec5d915214f6dd45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af14a9bb91f471419c3607d0026b9bd0e"><td class="memItemLeft" align="right" valign="top"><a id="af14a9bb91f471419c3607d0026b9bd0e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_ZLOG</b>&#160;&#160;&#160;0x4000</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_ZLOG</b>&#160;&#160;&#160;0b0100000000000000000000000000000</td></tr>
 <tr class="separator:af14a9bb91f471419c3607d0026b9bd0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d240f1dfa2d1a018d8d93957816e76f"><td class="memItemLeft" align="right" valign="top"><a id="a4d240f1dfa2d1a018d8d93957816e76f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_ZLOG_NOT_LOADED</b>&#160;&#160;&#160;0x4001</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_ZLOG_NOT_LOADED</b>&#160;&#160;&#160;(0x0001 | VS_FAIL_ZLOG)</td></tr>
 <tr class="separator:a4d240f1dfa2d1a018d8d93957816e76f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f66a858881de221f9083a22892d9611"><td class="memItemLeft" align="right" valign="top"><a id="a6f66a858881de221f9083a22892d9611"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_ZLOG_MISSING_CATEGORY</b>&#160;&#160;&#160;0x4002</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_ZLOG_MISSING_CATEGORY</b>&#160;&#160;&#160;(0x0002 | VS_FAIL_ZLOG)</td></tr>
 <tr class="separator:a6f66a858881de221f9083a22892d9611"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4292a6025bd094ed6ce5e5faeef55287"><td class="memItemLeft" align="right" valign="top"><a id="a4292a6025bd094ed6ce5e5faeef55287"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_X</b>&#160;&#160;&#160;0x1000</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_X</b>&#160;&#160;&#160;0b1000000000000000000000000000000</td></tr>
 <tr class="separator:a4292a6025bd094ed6ce5e5faeef55287"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa71ddf8e707b44753f55fdfc27486147"><td class="memItemLeft" align="right" valign="top"><a id="aa71ddf8e707b44753f55fdfc27486147"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_X_NO_CONNECTION</b>&#160;&#160;&#160;0x1001</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_X_NO_CONNECTION</b>&#160;&#160;&#160;(0x0001 | VS_FAIL_X)</td></tr>
 <tr class="separator:aa71ddf8e707b44753f55fdfc27486147"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a146680ba9a9c08fe88d51ecd852edec9"><td class="memItemLeft" align="right" valign="top"><a id="a146680ba9a9c08fe88d51ecd852edec9"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_GL</b>&#160;&#160;&#160;0x2000</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_GL</b>&#160;&#160;&#160;0b0001000000000000000000000000000</td></tr>
 <tr class="separator:a146680ba9a9c08fe88d51ecd852edec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d4421d547cc9e489315271b00481bff"><td class="memItemLeft" align="right" valign="top"><a id="a0d4421d547cc9e489315271b00481bff"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_GL_NOT_LOADED</b>&#160;&#160;&#160;0x2001</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_GL_NOT_LOADED</b>&#160;&#160;&#160;(0x0001 | VS_FAIL_GL)</td></tr>
 <tr class="separator:a0d4421d547cc9e489315271b00481bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a803b091598468e380fe401472ab20e12"><td class="memItemLeft" align="right" valign="top"><a id="a803b091598468e380fe401472ab20e12"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_GLX</b>&#160;&#160;&#160;0x5000</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_GLX</b>&#160;&#160;&#160;0b0000100000000000000000000000000</td></tr>
 <tr class="separator:a803b091598468e380fe401472ab20e12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12388ed07f7be2360734c91ba451e2a1"><td class="memItemLeft" align="right" valign="top"><a id="a12388ed07f7be2360734c91ba451e2a1"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_GLX_NO_VISUAL</b>&#160;&#160;&#160;0x5001</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_GLX_NO_VISUAL</b>&#160;&#160;&#160;(0x0001 | VS_FAIL_GLX)</td></tr>
 <tr class="separator:a12388ed07f7be2360734c91ba451e2a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a56a31cd8a771be13afca39e4aa5bc6"><td class="memItemLeft" align="right" valign="top"><a id="a1a56a31cd8a771be13afca39e4aa5bc6"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>vs_err</b>(ERR)&#160;&#160;&#160;{zlog_error(g_log, #ERR); return ERR;}</td></tr>
 <tr class="separator:a1a56a31cd8a771be13afca39e4aa5bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32cd33a594289f6294cc132632e38772"><td class="memItemLeft" align="right" valign="top"><a id="a32cd33a594289f6294cc132632e38772"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>vs_has_err</b>(X)&#160;&#160;&#160;!(X)</td></tr>
+<tr class="separator:a32cd33a594289f6294cc132632e38772"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -145,7 +150,9 @@ Variables</h2></td></tr>
 zlog_category_t *&#160;</td><td class="memItemRight" valign="bottom"><b>g_log</b></td></tr>
 <tr class="separator:a71fea5df2d52de4b3c2e2ad8b18c115c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Venus Graphics Engine Copyright (C) 2020, Wesley Studt </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

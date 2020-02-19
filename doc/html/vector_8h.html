@@ -65,42 +65,137 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">vector.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for vector.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="vector_8h__incl.png" border="0" usemap="#util_2vector_8h" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="vector_8h__dep__incl.png" border="0" usemap="#util_2vector_8hdep" alt=""/></div>
 <map name="util_2vector_8hdep" id="util_2vector_8hdep">
-<area shape="rect" id="node2" href="matrix_8h.html" title="util/matrix.h" alt="" coords="5,80,96,107"/>
-<area shape="rect" id="node4" href="vector_8c.html" title="util/vector.c" alt="" coords="120,80,211,107"/>
-<area shape="rect" id="node3" href="matrix_8c.html" title="util/matrix.c" alt="" coords="5,155,96,181"/>
+<area shape="rect" id="node2" href="types_8h.html" title="Includes some basic types Venus Graphics Engine Copyright (C) 2020, Wesley Studt. ..." alt="" coords="422,80,509,107"/>
+<area shape="rect" id="node3" href="window_8h.html" title="window.h" alt="" coords="373,155,451,181"/>
+<area shape="rect" id="node12" href="types_8c.html" title="util/types.c" alt="" coords="475,155,562,181"/>
+<area shape="rect" id="node4" href="graphics_8h.html" title="engine/graphics.h" alt="" coords="185,304,309,331"/>
+<area shape="rect" id="node6" href="panel_8c.html" title="toolkit/widgets/panel.c" alt="" coords="5,386,157,413"/>
+<area shape="rect" id="node7" href="text__field_8c.html" title="toolkit/widgets/text\l_field.c" alt="" coords="330,379,462,420"/>
+<area shape="rect" id="node8" href="default__theme_8h.html" title="Headers for default Venus theme. " alt="" coords="449,229,604,256"/>
+<area shape="rect" id="node9" href="default__theme_8c.html" title="The default theme for Venus and a good template to design new themes. " alt="" coords="487,386,641,413"/>
+<area shape="rect" id="node10" href="theme_8h.html" title="Venus theme. " alt="" coords="402,304,510,331"/>
+<area shape="rect" id="node11" href="window_8c.html" title="window.c" alt="" coords="665,386,743,413"/>
+<area shape="rect" id="node5" href="graphics_8c.html" title="engine/graphics.c" alt="" coords="182,386,306,413"/>
 </map>
 </div>
 </div>
 <p><a href="vector_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvector.html">vector</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:aef7794183fb0e54950ce39d24d56e88c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#aef7794183fb0e54950ce39d24d56e88c">VS_DEFINE_VECTOR_HEADER</a>(TYPE,  NAME)</td></tr>
+<tr class="memdesc:aef7794183fb0e54950ce39d24d56e88c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a new vector type and includes function prototypes.  <a href="#aef7794183fb0e54950ce39d24d56e88c">More...</a><br /></td></tr>
+<tr class="separator:aef7794183fb0e54950ce39d24d56e88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a249e54d71982e9aa22445321c9fdd2cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a249e54d71982e9aa22445321c9fdd2cd">VS_DEFINE_VECTOR_SOURCE</a>(TYPE,  NAME)</td></tr>
+<tr class="memdesc:a249e54d71982e9aa22445321c9fdd2cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the source code for a previously defined vector type.  <a href="#a249e54d71982e9aa22445321c9fdd2cd">More...</a><br /></td></tr>
+<tr class="separator:a249e54d71982e9aa22445321c9fdd2cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a65592a5df76b614fb217c8ed09e10784"><td class="memItemLeft" align="right" valign="top"><a id="a65592a5df76b614fb217c8ed09e10784"></a>
-<a class="el" href="structvector.html">vector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>create_vector</b> (unsigned size)</td></tr>
-<tr class="separator:a65592a5df76b614fb217c8ed09e10784"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3caa33859c2124565a0e1ee2a4e5006c"><td class="memItemLeft" align="right" valign="top"><a id="a3caa33859c2124565a0e1ee2a4e5006c"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>vector_dot</b> (<a class="el" href="structvector.html">vector</a> *vec0, <a class="el" href="structvector.html">vector</a> *vec1)</td></tr>
-<tr class="separator:a3caa33859c2124565a0e1ee2a4e5006c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33de33cda3e7bd8f39bc575db32a3e43"><td class="memItemLeft" align="right" valign="top"><a id="a33de33cda3e7bd8f39bc575db32a3e43"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>vector_multiply</b> (<a class="el" href="structvector.html">vector</a> *destination, <a class="el" href="structvector.html">vector</a> *source0, <a class="el" href="structvector.html">vector</a> *source1)</td></tr>
-<tr class="separator:a33de33cda3e7bd8f39bc575db32a3e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6674344a5c5c3672a42e4a10af089846"><td class="memItemLeft" align="right" valign="top"><a id="a6674344a5c5c3672a42e4a10af089846"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>vec_size</b> (void *vec)</td></tr>
+<tr class="separator:a6674344a5c5c3672a42e4a10af089846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94c40f2b664ea6faff87782b8a6826c2"><td class="memItemLeft" align="right" valign="top"><a id="a94c40f2b664ea6faff87782b8a6826c2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>vec_delete</b> (void *vec)</td></tr>
+<tr class="separator:a94c40f2b664ea6faff87782b8a6826c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Venus Graphics Engine Copyright (C) 2020, Wesley Studt </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="aef7794183fb0e54950ce39d24d56e88c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef7794183fb0e54950ce39d24d56e88c">&#9670;&nbsp;</a></span>VS_DEFINE_VECTOR_HEADER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VS_DEFINE_VECTOR_HEADER</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">TYPE, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">NAME&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">typedef</span> TYPE *NAME;                                                                         \</div><div class="line">                                                                                            \</div><div class="line">NAME create_##NAME(<span class="keywordtype">unsigned</span> size);                                                          \</div><div class="line">void NAME##_resize(NAME vec, <span class="keywordtype">unsigned</span> new_size);                                            \</div><div class="line">void NAME##_add(NAME dest, NAME src0, NAME src1);                                           \</div><div class="line">void NAME##_subtract(NAME dest, NAME src0, NAME src1);                                      \</div><div class="line">void NAME##_cross(NAME dest, NAME src0, NAME src1);                                         \</div><div class="line">void NAME##_multiply(NAME dest, NAME src, TYPE scalar);                                     \</div><div class="line">TYPE NAME##_dot(NAME src0, NAME src1);                                                      \</div></div><!-- fragment -->
+<p>Defines a new vector type and includes function prototypes. </p>
+<p>In Venus, a vector represents a mathematical vector, not a container like std::vector. The reason for this is that since Venus is a GUI/graphics library, it needs to manipulate points in two-dimensional space and three-dimensional space. This requires functions that can add, multiply, etc., vectors.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">TYPE</td><td>The datatype the vector should contain </td></tr>
+    <tr><td class="paramname">NAME</td><td>The name of the new vector </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a249e54d71982e9aa22445321c9fdd2cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a249e54d71982e9aa22445321c9fdd2cd">&#9670;&nbsp;</a></span>VS_DEFINE_VECTOR_SOURCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VS_DEFINE_VECTOR_SOURCE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">TYPE, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">NAME&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides the source code for a previously defined vector type. </p>
+<p>The two values need to reflect a vector type defined by VS_DEFINE_VECTOR_HEADER.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">TYPE</td><td>The datatype the vector contains </td></tr>
+    <tr><td class="paramname">NAME</td><td>The name of the vector </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

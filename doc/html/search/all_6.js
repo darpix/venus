@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['width',['width',['../structwindow.html#a6d1d235e4e25a3ffee451f880ff3d936',1,'window']]],
-  ['window',['window',['../structwindow.html',1,'']]],
-  ['window_2ec',['window.c',['../window_8c.html',1,'']]],
-  ['window_2eh',['window.h',['../window_8h.html',1,'']]]
+  ['insert_5fwidget',['insert_widget',['../widget_8c.html#a9427c9c89b58d02ab69600d8a71a8081',1,'insert_widget(void *parent, unsigned index, void *widget):&#160;widget.c'],['../widget_8h.html#a9427c9c89b58d02ab69600d8a71a8081',1,'insert_widget(void *parent, unsigned index, void *widget):&#160;widget.c']]]
 ];

@@ -1,10 +1,7 @@
-/* 
+/**
+ * @file window.h 
  * Venus Graphics Engine
  * Copyright (C) 2020, Wesley Studt
- */
-
-/**
- * @file window.h
  */
 
 #ifndef VS_WINDOW_H
@@ -12,9 +9,10 @@
 
 #include "venus.h"
 
+#include "util/types.h"
+
 typedef unsigned long __x_win;
 typedef struct __GLXcontextRec *__glx_context;
-typedef struct XVisualInfo __xvisual_info;
 
 /**
  * @brief Structure that contains the basic building blocks for each venus window.
@@ -22,19 +20,14 @@ typedef struct XVisualInfo __xvisual_info;
  * It carries an X Window and a pointer to it's own separate GLXContext that can be used to draw on the window.
  */
 
-typedef struct {
+typedef struct {/// The number of child widgets
+	unsigned n_children;
 	
-	/// The width of the window
-	int width;
-	
-	/// The height of the window
-	int height;
+	/// Child widgets
+	void **children;
 	
 	/// Pointer to the window's unique GLXContext
 	__glx_context *context;
-	
-	// The visual info
-	__xvisual_info info;
 	
 	/// The actual window
 	__x_win xwin;
@@ -67,6 +60,8 @@ int venus_terminate();
  * 
  * This creates a new X window and binds a GL context to that window.
  * 
+ * @param win Pointer to window
+ * 
  * @return Returns an error code. Can be VS_FAIL_GLX_NO_VISUAL or VS_FAIL_GL_NOT_LOADED
  */
 int create_window(window *win);
@@ -76,14 +71,38 @@ int create_window(window *win);
  * 
  * You should always destroy any window you create in order to ensure that no memory is leaked.
  * 
+ * @param win Pointer to window
+ * 
  * @Return Returns an error code.
  */
 int destroy_window(window *win);
 
 /**
+ * @brief Sets a window's title
+ * 
+ * @param win Pointer to window
+ * @param title The desired title
+ * 
+ * @return Returns an error code
+ */
+int set_title(window *win, char* title);
+
+/**
+ * @brief Sets a window's color
+ * 
+ * @param win Pointer to window
+ * @param color The window's color. Only the first three values, the red, green, and blue values, are used.
+ * 
+ * @return Returns an error code
+ */
+int set_background_color(window *win, color color);
+
+/**
  * @brief Shows a window
  * 
- * This requests X to "map" the window
+ * This requests X to map the window
+ * 
+ * @param win Pointer to window
  * 
  * @return Returns an error code
  */
@@ -92,7 +111,9 @@ int show(window *win);
 /**
  * @brief Hides a window
  * 
- * This requests X to "unmap" the window
+ * This requests X to unmap the window
+ * 
+ * @param win Pointer to window
  * 
  * @return Returns an error code
  */
@@ -109,7 +130,9 @@ int flush();
 
 /**
  * @brief Starts the event loop for any associated venus windows
+ * 
+ * @return Returns an error code. The error code probably won't matter, but it will tell you if the program crashed or not
  */
-void venus_begin_loop();
+int venus_begin_loop();
 
 #endif

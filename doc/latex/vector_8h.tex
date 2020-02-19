@@ -1,26 +1,91 @@
 \hypertarget{vector_8h}{}\section{util/vector.h File Reference}
 \label{vector_8h}\index{util/vector.\+h@{util/vector.\+h}}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for vector.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=234pt]{vector_8h__dep__incl}
+\includegraphics[width=196pt]{vector_8h__incl}
 \end{center}
 \end{figure}
-\subsection*{Data Structures}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vector_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-struct \hyperlink{structvector}{vector}
-\end{DoxyCompactItemize}
+\#define \hyperlink{vector_8h_aef7794183fb0e54950ce39d24d56e88c}{V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+H\+E\+A\+D\+ER}(T\+Y\+PE,  N\+A\+ME)
+\begin{DoxyCompactList}\small\item\em Defines a new vector type and includes function prototypes. \end{DoxyCompactList}\item 
+\#define \hyperlink{vector_8h_a249e54d71982e9aa22445321c9fdd2cd}{V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+S\+O\+U\+R\+CE}(T\+Y\+PE,  N\+A\+ME)
+\begin{DoxyCompactList}\small\item\em Provides the source code for a previously defined vector type. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{vector_8h_a65592a5df76b614fb217c8ed09e10784}\label{vector_8h_a65592a5df76b614fb217c8ed09e10784}} 
-\hyperlink{structvector}{vector} {\bfseries create\+\_\+vector} (unsigned size)
+\mbox{\Hypertarget{vector_8h_a6674344a5c5c3672a42e4a10af089846}\label{vector_8h_a6674344a5c5c3672a42e4a10af089846}} 
+unsigned {\bfseries vec\+\_\+size} (void $\ast$vec)
 \item 
-\mbox{\Hypertarget{vector_8h_a3caa33859c2124565a0e1ee2a4e5006c}\label{vector_8h_a3caa33859c2124565a0e1ee2a4e5006c}} 
-float {\bfseries vector\+\_\+dot} (\hyperlink{structvector}{vector} $\ast$vec0, \hyperlink{structvector}{vector} $\ast$vec1)
-\item 
-\mbox{\Hypertarget{vector_8h_a33de33cda3e7bd8f39bc575db32a3e43}\label{vector_8h_a33de33cda3e7bd8f39bc575db32a3e43}} 
-int {\bfseries vector\+\_\+multiply} (\hyperlink{structvector}{vector} $\ast$destination, \hyperlink{structvector}{vector} $\ast$source0, \hyperlink{structvector}{vector} $\ast$source1)
+\mbox{\Hypertarget{vector_8h_a94c40f2b664ea6faff87782b8a6826c2}\label{vector_8h_a94c40f2b664ea6faff87782b8a6826c2}} 
+void {\bfseries vec\+\_\+delete} (void $\ast$vec)
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Venus Graphics Engine Copyright (C) 2020, Wesley Studt 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{vector_8h_aef7794183fb0e54950ce39d24d56e88c}\label{vector_8h_aef7794183fb0e54950ce39d24d56e88c}} 
+\index{vector.\+h@{vector.\+h}!V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+H\+E\+A\+D\+ER@{V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+H\+E\+A\+D\+ER}}
+\index{V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+H\+E\+A\+D\+ER@{V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+H\+E\+A\+D\+ER}!vector.\+h@{vector.\+h}}
+\subsubsection{\texorpdfstring{V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+H\+E\+A\+D\+ER}{VS\_DEFINE\_VECTOR\_HEADER}}
+{\footnotesize\ttfamily \#define V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+H\+E\+A\+D\+ER(\begin{DoxyParamCaption}\item[{}]{T\+Y\+PE,  }\item[{}]{N\+A\+ME }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{typedef} TYPE *NAME;                                                                         \(\backslash\)
+                                                                                            \(\backslash\)
+NAME create\_##NAME(\textcolor{keywordtype}{unsigned} size);                                                          \(\backslash\)
+void NAME##\_resize(NAME vec, \textcolor{keywordtype}{unsigned} new\_size);                                            \(\backslash\)
+void NAME##\_add(NAME dest, NAME src0, NAME src1);                                           \(\backslash\)
+void NAME##\_subtract(NAME dest, NAME src0, NAME src1);                                      \(\backslash\)
+void NAME##\_cross(NAME dest, NAME src0, NAME src1);                                         \(\backslash\)
+void NAME##\_multiply(NAME dest, NAME src, TYPE scalar);                                     \(\backslash\)
+TYPE NAME##\_dot(NAME src0, NAME src1);                                                      \(\backslash\)
+\end{DoxyCode}
+
+
+Defines a new vector type and includes function prototypes. 
+
+In Venus, a vector represents a mathematical vector, not a container like std\+::vector. The reason for this is that since Venus is a G\+U\+I/graphics library, it needs to manipulate points in two-\/dimensional space and three-\/dimensional space. This requires functions that can add, multiply, etc., vectors.
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Y\+PE} & The datatype the vector should contain \\
+\hline
+{\em N\+A\+ME} & The name of the new vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8h_a249e54d71982e9aa22445321c9fdd2cd}\label{vector_8h_a249e54d71982e9aa22445321c9fdd2cd}} 
+\index{vector.\+h@{vector.\+h}!V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+S\+O\+U\+R\+CE@{V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+S\+O\+U\+R\+CE}}
+\index{V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+S\+O\+U\+R\+CE@{V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+S\+O\+U\+R\+CE}!vector.\+h@{vector.\+h}}
+\subsubsection{\texorpdfstring{V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+S\+O\+U\+R\+CE}{VS\_DEFINE\_VECTOR\_SOURCE}}
+{\footnotesize\ttfamily \#define V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+S\+O\+U\+R\+CE(\begin{DoxyParamCaption}\item[{}]{T\+Y\+PE,  }\item[{}]{N\+A\+ME }\end{DoxyParamCaption})}
+
+
+
+Provides the source code for a previously defined vector type. 
+
+The two values need to reflect a vector type defined by V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+H\+E\+A\+D\+ER.
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Y\+PE} & The datatype the vector contains \\
+\hline
+{\em N\+A\+ME} & The name of the vector \\
+\hline
+\end{DoxyParams}

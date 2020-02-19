@@ -1,10 +1,7 @@
-;/*
+/** 
+ * @file matrix.h
  * Venus Graphics Engine
  * Copyright (C) 2020, Wesley Studt
- */
-
-/**
- * @file matrix.h
  */
 
 #ifndef VS_MATRIX_H
@@ -17,24 +14,10 @@
 #include <string.h>
 
 #include <stdio.h>
-unsigned matrix_rows(void *mat) {
-	unsigned *source = ((unsigned*) mat) - 2;
-	return *(source);
-}
-
-unsigned matrix_columns(void *mat) {
-	unsigned *source = ((unsigned*) mat) - 1;
-	return *(source);
-}
-
-unsigned matrix_size(void *mat) {
-	return matrix_rows(mat) * matrix_columns(mat);
-}
-
-void matrix_delete(void *mat) {
-	unsigned *source = ((unsigned*) mat) - 2;
-	free(source);
-}
+unsigned matrix_rows(void *mat);
+unsigned matrix_columns(void *mat);
+unsigned matrix_size(void *mat);
+void matrix_delete(void *mat);
 
 #define VS_DEFINE_MATRIX(TYPE, NAME)														\
 typedef TYPE *NAME;																			\

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['matrix_2ec',['matrix.c',['../matrix_8c.html',1,'']]],
-  ['matrix_2eh',['matrix.h',['../matrix_8h.html',1,'']]]
+  ['default_5ftheme_2ec',['default_theme.c',['../default__theme_8c.html',1,'']]],
+  ['default_5ftheme_2eh',['default_theme.h',['../default__theme_8h.html',1,'']]]
 ];

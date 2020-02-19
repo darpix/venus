@@ -1,10 +1,7 @@
-;/*
- * Venus Graphics Engine
- * Copyright (C) 2020, Wesley Studt
- */
-
 /**
  * @file vector.h
+ * Venus Graphics Engine
+ * Copyright (C) 2020, Wesley Studt
  */
 
 #ifndef VS_VECTOR_H
@@ -13,22 +10,45 @@
 #include <stdlib.h>
 #include <string.h>
 
-unsigned vec_size(void *vec) {
-	unsigned *size = vec;
-	return *(--size);
-}
-
-void vec_delete(void *vec) {
-	unsigned *source = vec;
-	free(--source);
-}
+unsigned vec_size(void *vec);
+void vec_delete(void *vec);
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#define VS_DEFINE_VECTOR(TYPE, NAME)														\
+/**
+ * @brief Defines a new vector type and includes function prototypes
+ * 
+ * In Venus, a vector represents a mathematical vector, not a container like std::vector. The reason for this is that since
+ * Venus is a GUI/graphics library, it needs to manipulate points in two-dimensional space and three-dimensional space. This
+ * requires functions that can add, multiply, etc., vectors.
+ * 
+ * @param TYPE The datatype the vector should contain
+ * @param NAME The name of the new vector
+ */
+	
+#define VS_DEFINE_VECTOR_HEADER(TYPE, NAME)													\
 typedef TYPE *NAME;																			\
+																							\
+NAME create_##NAME(unsigned size);															\
+void NAME##_resize(NAME vec, unsigned new_size);											\
+void NAME##_add(NAME dest, NAME src0, NAME src1);											\
+void NAME##_subtract(NAME dest, NAME src0, NAME src1);										\
+void NAME##_cross(NAME dest, NAME src0, NAME src1);											\
+void NAME##_multiply(NAME dest, NAME src, TYPE scalar);										\
+TYPE NAME##_dot(NAME src0, NAME src1);														\
+
+/**
+ * @brief Provides the source code for a previously defined vector type
+ * 
+ * The two values need to reflect a vector type defined by VS_DEFINE_VECTOR_HEADER.
+ * 
+ * @param TYPE The datatype the vector contains
+ * @param NAME The name of the vector
+ */
+
+#define VS_DEFINE_VECTOR_SOURCE(TYPE, NAME)													\
 																							\
 NAME create_##NAME(unsigned size) {															\
 	char *source = malloc(sizeof(unsigned) + sizeof(TYPE) * size);							\
@@ -91,7 +111,9 @@ TYPE NAME##_dot(NAME src0, NAME src1) {														\
 		dot += src0[i] * src1[i];															\
 	return dot;																				\
 }
+
 #ifdef __cplusplus
 }
 #endif
+
 #endif

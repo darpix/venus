@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['show',['show',['../window_8c.html#a294b947aff88bc133591bc02f3269d51',1,'show(window *win):&#160;window.c'],['../window_8h.html#a294b947aff88bc133591bc02f3269d51',1,'show(window *win):&#160;window.c']]]
+  ['flush',['flush',['../window_8c.html#a6a97127a0760a0ca431456fd3fd5c087',1,'flush():&#160;window.c'],['../window_8h.html#a6a97127a0760a0ca431456fd3fd5c087',1,'flush():&#160;window.c']]]
 ];

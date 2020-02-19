@@ -7,7 +7,9 @@
 {\ttfamily \#include $<$G\+L/glx.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}venus\+\_\+common.\+h\char`\"{}}\newline
-Include dependency graph for window.\+c\+:\nopagebreak
+{\ttfamily \#include \char`\"{}toolkit/theme.\+h\char`\"{}}\newline
+Include dependency graph for window.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,18 +19,29 @@ Include dependency graph for window.\+c\+:\nopagebreak
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{window_8c_a0a2a797f421f1fc06eb78ac0157f02ed}\label{window_8c_a0a2a797f421f1fc06eb78ac0157f02ed}} 
+G\+L\+X\+Context {\bfseries context} (\hyperlink{structwindow}{window} $\ast$\hyperlink{structwindow}{window})
+\item 
 int \hyperlink{window_8c_affebef5e6a51b1546cadf37adf74297a}{venus\+\_\+initialize} ()
 \begin{DoxyCompactList}\small\item\em Initializes venus and the libraries used. \end{DoxyCompactList}\item 
+int \hyperlink{window_8c_aa2ee2c8b10e2e4536bb4151990f48ac2}{destroy\+\_\+window} (\hyperlink{structwindow}{window} $\ast$win)
+\begin{DoxyCompactList}\small\item\em Destroys a window. \end{DoxyCompactList}\item 
 int \hyperlink{window_8c_a7ddd3c1fff91f413837be14742e82c5e}{venus\+\_\+terminate} ()
 \begin{DoxyCompactList}\small\item\em Terminates venus and does memory clean up. \end{DoxyCompactList}\item 
 int \hyperlink{window_8c_aa1667db02fb07f04dfb4b96ddec6893d}{create\+\_\+window} (\hyperlink{structwindow}{window} $\ast$win)
 \begin{DoxyCompactList}\small\item\em Creates a new window. \end{DoxyCompactList}\item 
+int \hyperlink{window_8c_aba54f1b4e0762bd4cc0434d4f17a87c4}{set\+\_\+title} (\hyperlink{structwindow}{window} $\ast$win, char $\ast$title)
+\begin{DoxyCompactList}\small\item\em Sets a window\textquotesingle{}s title. \end{DoxyCompactList}\item 
+int \hyperlink{window_8c_a25032ce093a2111eef67bdebeb5f887c}{set\+\_\+background\+\_\+color} (\hyperlink{structwindow}{window} $\ast$win, color color)
+\begin{DoxyCompactList}\small\item\em Sets a window\textquotesingle{}s color. \end{DoxyCompactList}\item 
 int \hyperlink{window_8c_a294b947aff88bc133591bc02f3269d51}{show} (\hyperlink{structwindow}{window} $\ast$win)
 \begin{DoxyCompactList}\small\item\em Shows a window. \end{DoxyCompactList}\item 
 int \hyperlink{window_8c_a1739057d6d8077a7490b0467ea5d064b}{hide} (\hyperlink{structwindow}{window} $\ast$win)
 \begin{DoxyCompactList}\small\item\em Hides a window. \end{DoxyCompactList}\item 
 int \hyperlink{window_8c_a6a97127a0760a0ca431456fd3fd5c087}{flush} ()
-\begin{DoxyCompactList}\small\item\em Flushes all X requests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Flushes all X requests. \end{DoxyCompactList}\item 
+int \hyperlink{window_8c_a43891902ce142858e0ee68ce4dff0231}{venus\+\_\+begin\+\_\+loop} ()
+\begin{DoxyCompactList}\small\item\em Starts the event loop for any associated venus windows. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -40,8 +53,17 @@ Window {\bfseries g\+\_\+root} = 0
 \item 
 \mbox{\Hypertarget{window_8c_a71fea5df2d52de4b3c2e2ad8b18c115c}\label{window_8c_a71fea5df2d52de4b3c2e2ad8b18c115c}} 
 zlog\+\_\+category\+\_\+t $\ast$ {\bfseries g\+\_\+log} = N\+U\+LL
+\item 
+\mbox{\Hypertarget{window_8c_a5e9fb4f61e22bd025fe21928351478ee}\label{window_8c_a5e9fb4f61e22bd025fe21928351478ee}} 
+X\+Visual\+Info $\ast$ {\bfseries g\+\_\+visual\+\_\+info} = N\+U\+LL
+\item 
+\mbox{\Hypertarget{window_8c_a852596e508995c2317a4a3579e9219fe}\label{window_8c_a852596e508995c2317a4a3579e9219fe}} 
+\hyperlink{structwindow}{window} $\ast$ {\bfseries current\+\_\+window}
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Venus Graphics Engine Copyright (C) 2020, Wesley Studt 
 
 \subsection{Function Documentation}
 \mbox{\Hypertarget{window_8c_aa1667db02fb07f04dfb4b96ddec6893d}\label{window_8c_aa1667db02fb07f04dfb4b96ddec6893d}} 
@@ -56,10 +78,32 @@ Creates a new window.
 
 This creates a new X window and binds a GL context to that window.
 
+
+\begin{DoxyParams}{Parameters}
+{\em win} & Pointer to window\\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Returns an error code. Can be V\+S\+\_\+\+F\+A\+I\+L\+\_\+\+G\+L\+X\+\_\+\+N\+O\+\_\+\+V\+I\+S\+U\+AL or V\+S\+\_\+\+F\+A\+I\+L\+\_\+\+G\+L\+\_\+\+N\+O\+T\+\_\+\+L\+O\+A\+D\+ED 
 \end{DoxyReturn}
-\mbox{\Hypertarget{window_8c_a6a97127a0760a0ca431456fd3fd5c087}\label{window_8c_a6a97127a0760a0ca431456fd3fd5c087}} 
+\mbox{\Hypertarget{window_8c_aa2ee2c8b10e2e4536bb4151990f48ac2}\label{window_8c_aa2ee2c8b10e2e4536bb4151990f48ac2}} 
+\index{window.\+c@{window.\+c}!destroy\+\_\+window@{destroy\+\_\+window}}
+\index{destroy\+\_\+window@{destroy\+\_\+window}!window.\+c@{window.\+c}}
+\subsubsection{\texorpdfstring{destroy\+\_\+window()}{destroy\_window()}}
+{\footnotesize\ttfamily int destroy\+\_\+window (\begin{DoxyParamCaption}\item[{\hyperlink{structwindow}{window} $\ast$}]{win }\end{DoxyParamCaption})}
+
+
+
+Destroys a window. 
+
+You should always destroy any window you create in order to ensure that no memory is leaked.
+
+
+\begin{DoxyParams}{Parameters}
+{\em win} & Pointer to window\\
+\hline
+\end{DoxyParams}
+Returns an error code. \mbox{\Hypertarget{window_8c_a6a97127a0760a0ca431456fd3fd5c087}\label{window_8c_a6a97127a0760a0ca431456fd3fd5c087}} 
 \index{window.\+c@{window.\+c}!flush@{flush}}
 \index{flush@{flush}!window.\+c@{window.\+c}}
 \subsubsection{\texorpdfstring{flush()}{flush()}}
@@ -84,8 +128,53 @@ Returns an error code
 
 Hides a window. 
 
-This requests X to \char`\"{}unmap\char`\"{} the window
+This requests X to unmap the window
 
+
+\begin{DoxyParams}{Parameters}
+{\em win} & Pointer to window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns an error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{window_8c_a25032ce093a2111eef67bdebeb5f887c}\label{window_8c_a25032ce093a2111eef67bdebeb5f887c}} 
+\index{window.\+c@{window.\+c}!set\+\_\+background\+\_\+color@{set\+\_\+background\+\_\+color}}
+\index{set\+\_\+background\+\_\+color@{set\+\_\+background\+\_\+color}!window.\+c@{window.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+background\+\_\+color()}{set\_background\_color()}}
+{\footnotesize\ttfamily int set\+\_\+background\+\_\+color (\begin{DoxyParamCaption}\item[{\hyperlink{structwindow}{window} $\ast$}]{win,  }\item[{color}]{color }\end{DoxyParamCaption})}
+
+
+
+Sets a window\textquotesingle{}s color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em win} & Pointer to window \\
+\hline
+{\em color} & The window\textquotesingle{}s color. Only the first three values, the red, green, and blue values, are used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns an error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{window_8c_aba54f1b4e0762bd4cc0434d4f17a87c4}\label{window_8c_aba54f1b4e0762bd4cc0434d4f17a87c4}} 
+\index{window.\+c@{window.\+c}!set\+\_\+title@{set\+\_\+title}}
+\index{set\+\_\+title@{set\+\_\+title}!window.\+c@{window.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+title()}{set\_title()}}
+{\footnotesize\ttfamily int set\+\_\+title (\begin{DoxyParamCaption}\item[{\hyperlink{structwindow}{window} $\ast$}]{win,  }\item[{char $\ast$}]{title }\end{DoxyParamCaption})}
+
+
+
+Sets a window\textquotesingle{}s title. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em win} & Pointer to window \\
+\hline
+{\em title} & The desired title\\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Returns an error code 
 \end{DoxyReturn}
@@ -99,10 +188,28 @@ Returns an error code
 
 Shows a window. 
 
-This requests X to \char`\"{}map\char`\"{} the window
+This requests X to map the window
 
+
+\begin{DoxyParams}{Parameters}
+{\em win} & Pointer to window\\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Returns an error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{window_8c_a43891902ce142858e0ee68ce4dff0231}\label{window_8c_a43891902ce142858e0ee68ce4dff0231}} 
+\index{window.\+c@{window.\+c}!venus\+\_\+begin\+\_\+loop@{venus\+\_\+begin\+\_\+loop}}
+\index{venus\+\_\+begin\+\_\+loop@{venus\+\_\+begin\+\_\+loop}!window.\+c@{window.\+c}}
+\subsubsection{\texorpdfstring{venus\+\_\+begin\+\_\+loop()}{venus\_begin\_loop()}}
+{\footnotesize\ttfamily int venus\+\_\+begin\+\_\+loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the event loop for any associated venus windows. 
+
+\begin{DoxyReturn}{Returns}
+Returns an error code. The error code probably won\textquotesingle{}t matter, but it will tell you if the program crashed or not 
 \end{DoxyReturn}
 \mbox{\Hypertarget{window_8c_affebef5e6a51b1546cadf37adf74297a}\label{window_8c_affebef5e6a51b1546cadf37adf74297a}} 
 \index{window.\+c@{window.\+c}!venus\+\_\+initialize@{venus\+\_\+initialize}}

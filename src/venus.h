@@ -1,10 +1,7 @@
-/*
- * Venus Graphics Engine
- * Copyright (C) 2020, Wesley Studt
- */
-
 /**
  * @file venus.h
+ * Venus Graphics Engine
+ * Copyright (C) 2020, Wesley Studt
  */
 
 #pragma once

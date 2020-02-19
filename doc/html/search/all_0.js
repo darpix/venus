@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['context',['context',['../structwindow.html#a90eff798620fee3c37913a2a50f1c2a8',1,'window']]],
-  ['create_5fwindow',['create_window',['../window_8c.html#aa1667db02fb07f04dfb4b96ddec6893d',1,'create_window(window *win):&#160;window.c'],['../window_8h.html#aa1667db02fb07f04dfb4b96ddec6893d',1,'create_window(window *win):&#160;window.c']]]
+  ['add_5fwidget',['add_widget',['../widget_8c.html#a8c77617b31db7f2d967cb67d59bf46f3',1,'add_widget(void *parent, void *widget):&#160;widget.c'],['../widget_8h.html#a8c77617b31db7f2d967cb67d59bf46f3',1,'add_widget(void *parent, void *widget):&#160;widget.c']]],
+  ['allocate_5fchildren',['allocate_children',['../widget_8c.html#a01b84bf4497edd8577844309be818de7',1,'allocate_children(void *widget, unsigned size):&#160;widget.c'],['../widget_8h.html#a01b84bf4497edd8577844309be818de7',1,'allocate_children(void *widget, unsigned size):&#160;widget.c']]]
 ];

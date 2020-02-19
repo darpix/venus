@@ -62,7 +62,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -70,12 +69,15 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="venus_8h_source.html">venus.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">util/types.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for window.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="window_8h__incl.png" border="0" usemap="#window_8h" alt=""/></div>
 <map name="window_8h" id="window_8h">
-<area shape="rect" id="node2" href="venus_8h.html" title="venus.h" alt="" coords="10,80,78,107"/>
+<area shape="rect" id="node2" href="venus_8h.html" title="venus.h" alt="" coords="5,80,73,107"/>
+<area shape="rect" id="node3" href="types_8h.html" title="Includes some basic types Venus Graphics Engine Copyright (C) 2020, Wesley Studt. ..." alt="" coords="97,80,184,107"/>
+<area shape="rect" id="node4" href="vector_8h.html" title="vector.h" alt="" coords="106,155,175,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -83,7 +85,14 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="window_8h__dep__incl.png" border="0" usemap="#window_8hdep" alt=""/></div>
 <map name="window_8hdep" id="window_8hdep">
-<area shape="rect" id="node2" href="window_8c.html" title="window.c" alt="" coords="5,80,83,107"/>
+<area shape="rect" id="node2" href="graphics_8h.html" title="engine/graphics.h" alt="" coords="185,155,309,181"/>
+<area shape="rect" id="node4" href="panel_8c.html" title="toolkit/widgets/panel.c" alt="" coords="5,237,157,263"/>
+<area shape="rect" id="node5" href="text__field_8c.html" title="toolkit/widgets/text\l_field.c" alt="" coords="330,229,462,271"/>
+<area shape="rect" id="node6" href="default__theme_8h.html" title="Headers for default Venus theme. " alt="" coords="449,80,604,107"/>
+<area shape="rect" id="node7" href="default__theme_8c.html" title="The default theme for Venus and a good template to design new themes. " alt="" coords="487,237,641,263"/>
+<area shape="rect" id="node8" href="theme_8h.html" title="Venus theme. " alt="" coords="402,155,510,181"/>
+<area shape="rect" id="node9" href="window_8c.html" title="window.c" alt="" coords="665,237,743,263"/>
+<area shape="rect" id="node3" href="graphics_8c.html" title="engine/graphics.c" alt="" coords="182,237,306,263"/>
 </map>
 </div>
 </div>
@@ -115,6 +124,15 @@ Functions</h2></td></tr>
 <tr class="memitem:aa1667db02fb07f04dfb4b96ddec6893d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#aa1667db02fb07f04dfb4b96ddec6893d">create_window</a> (<a class="el" href="structwindow.html">window</a> *win)</td></tr>
 <tr class="memdesc:aa1667db02fb07f04dfb4b96ddec6893d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new window.  <a href="#aa1667db02fb07f04dfb4b96ddec6893d">More...</a><br /></td></tr>
 <tr class="separator:aa1667db02fb07f04dfb4b96ddec6893d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2ee2c8b10e2e4536bb4151990f48ac2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#aa2ee2c8b10e2e4536bb4151990f48ac2">destroy_window</a> (<a class="el" href="structwindow.html">window</a> *win)</td></tr>
+<tr class="memdesc:aa2ee2c8b10e2e4536bb4151990f48ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a window.  <a href="#aa2ee2c8b10e2e4536bb4151990f48ac2">More...</a><br /></td></tr>
+<tr class="separator:aa2ee2c8b10e2e4536bb4151990f48ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba54f1b4e0762bd4cc0434d4f17a87c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#aba54f1b4e0762bd4cc0434d4f17a87c4">set_title</a> (<a class="el" href="structwindow.html">window</a> *win, char *title)</td></tr>
+<tr class="memdesc:aba54f1b4e0762bd4cc0434d4f17a87c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a window's title.  <a href="#aba54f1b4e0762bd4cc0434d4f17a87c4">More...</a><br /></td></tr>
+<tr class="separator:aba54f1b4e0762bd4cc0434d4f17a87c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25032ce093a2111eef67bdebeb5f887c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#a25032ce093a2111eef67bdebeb5f887c">set_background_color</a> (<a class="el" href="structwindow.html">window</a> *win, color color)</td></tr>
+<tr class="memdesc:a25032ce093a2111eef67bdebeb5f887c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a window's color.  <a href="#a25032ce093a2111eef67bdebeb5f887c">More...</a><br /></td></tr>
+<tr class="separator:a25032ce093a2111eef67bdebeb5f887c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a294b947aff88bc133591bc02f3269d51"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#a294b947aff88bc133591bc02f3269d51">show</a> (<a class="el" href="structwindow.html">window</a> *win)</td></tr>
 <tr class="memdesc:a294b947aff88bc133591bc02f3269d51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows a window.  <a href="#a294b947aff88bc133591bc02f3269d51">More...</a><br /></td></tr>
 <tr class="separator:a294b947aff88bc133591bc02f3269d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,8 +142,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a6a97127a0760a0ca431456fd3fd5c087"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#a6a97127a0760a0ca431456fd3fd5c087">flush</a> ()</td></tr>
 <tr class="memdesc:a6a97127a0760a0ca431456fd3fd5c087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flushes all X requests.  <a href="#a6a97127a0760a0ca431456fd3fd5c087">More...</a><br /></td></tr>
 <tr class="separator:a6a97127a0760a0ca431456fd3fd5c087"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43891902ce142858e0ee68ce4dff0231"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#a43891902ce142858e0ee68ce4dff0231">venus_begin_loop</a> ()</td></tr>
+<tr class="memdesc:a43891902ce142858e0ee68ce4dff0231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the event loop for any associated venus windows.  <a href="#a43891902ce142858e0ee68ce4dff0231">More...</a><br /></td></tr>
+<tr class="separator:a43891902ce142858e0ee68ce4dff0231"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Venus Graphics Engine Copyright (C) 2020, Wesley Studt </p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="aa1667db02fb07f04dfb4b96ddec6893d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa1667db02fb07f04dfb4b96ddec6893d">&#9670;&nbsp;</a></span>create_window()</h2>
 
@@ -144,7 +167,41 @@ Functions</h2></td></tr>
 
 <p>Creates a new window. </p>
 <p>This creates a new X window and binds a GL context to that window.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>Pointer to window</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns an error code. Can be VS_FAIL_GLX_NO_VISUAL or VS_FAIL_GL_NOT_LOADED </dd></dl>
+
+</div>
+</div>
+<a id="aa2ee2c8b10e2e4536bb4151990f48ac2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2ee2c8b10e2e4536bb4151990f48ac2">&#9670;&nbsp;</a></span>destroy_window()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int destroy_window </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structwindow.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destroys a window. </p>
+<p>You should always destroy any window you create in order to ensure that no memory is leaked.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>Pointer to window</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Returns an error code. </p>
 
 </div>
 </div>
@@ -186,7 +243,89 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Hides a window. </p>
-<p>This requests X to "unmap" the window</p>
+<p>This requests X to unmap the window</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>Pointer to window</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns an error code </dd></dl>
+
+</div>
+</div>
+<a id="a25032ce093a2111eef67bdebeb5f887c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25032ce093a2111eef67bdebeb5f887c">&#9670;&nbsp;</a></span>set_background_color()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int set_background_color </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structwindow.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a window's color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>Pointer to window </td></tr>
+    <tr><td class="paramname">color</td><td>The window's color. Only the first three values, the red, green, and blue values, are used.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns an error code </dd></dl>
+
+</div>
+</div>
+<a id="aba54f1b4e0762bd4cc0434d4f17a87c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba54f1b4e0762bd4cc0434d4f17a87c4">&#9670;&nbsp;</a></span>set_title()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int set_title </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structwindow.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>title</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a window's title. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>Pointer to window </td></tr>
+    <tr><td class="paramname">title</td><td>The desired title</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns an error code </dd></dl>
 
 </div>
@@ -208,8 +347,34 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Shows a window. </p>
-<p>This requests X to "map" the window</p>
+<p>This requests X to map the window</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>Pointer to window</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns an error code </dd></dl>
+
+</div>
+</div>
+<a id="a43891902ce142858e0ee68ce4dff0231"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43891902ce142858e0ee68ce4dff0231">&#9670;&nbsp;</a></span>venus_begin_loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int venus_begin_loop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Starts the event loop for any associated venus windows. </p>
+<dl class="section return"><dt>Returns</dt><dd>Returns an error code. The error code probably won't matter, but it will tell you if the program crashed or not </dd></dl>
 
 </div>
 </div>

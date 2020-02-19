@@ -1,4 +1,6 @@
 <map id="venus_common.h" name="venus_common.h">
-<area shape="rect" id="node2" href="$matrix_8c.html" title="util/matrix.c" alt="" coords="5,80,96,107"/>
-<area shape="rect" id="node3" href="$window_8c.html" title="window.c" alt="" coords="120,80,197,107"/>
+<area shape="rect" id="node2" href="$widget_8c.html" title="toolkit/widget.c" alt="" coords="5,87,116,114"/>
+<area shape="rect" id="node3" href="$panel_8c.html" title="toolkit/widgets/panel.c" alt="" coords="141,87,293,114"/>
+<area shape="rect" id="node4" href="$text__field_8c.html" title="toolkit/widgets/text\l_field.c" alt="" coords="317,80,449,121"/>
+<area shape="rect" id="node5" href="$window_8c.html" title="window.c" alt="" coords="474,87,551,114"/>
 </map>

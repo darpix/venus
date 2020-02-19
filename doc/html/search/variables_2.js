@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['width',['width',['../structwindow.html#a6d1d235e4e25a3ffee451f880ff3d936',1,'window']]]
+  ['xwin',['xwin',['../structwindow.html#a23ff6e8e3c92fbe719eac958c837303d',1,'window']]]
 ];
