@@ -59,7 +59,18 @@ CMakeFiles/venus.dir/src/util/types.c.o
  /home/wesley/Workspace/venus/src/util/types.c
  /home/wesley/Workspace/venus/src/util/types.h
  /home/wesley/Workspace/venus/src/util/vector.h
+CMakeFiles/venus.dir/src/venus.c.o
+ /home/wesley/Workspace/venus/src/engine/graphics.h
+ /home/wesley/Workspace/venus/src/toolkit/default_theme.h
+ /home/wesley/Workspace/venus/src/toolkit/theme.h
+ /home/wesley/Workspace/venus/src/util/types.h
+ /home/wesley/Workspace/venus/src/util/vector.h
+ /home/wesley/Workspace/venus/src/venus.c
+ /home/wesley/Workspace/venus/src/venus.h
+ /home/wesley/Workspace/venus/src/venus_common.h
+ /home/wesley/Workspace/venus/src/window.h
 CMakeFiles/venus.dir/src/window.c.o
+ /home/wesley/Workspace/venus/src/engine/graphics.h
  /home/wesley/Workspace/venus/src/toolkit/default_theme.h
  /home/wesley/Workspace/venus/src/toolkit/theme.h
  /home/wesley/Workspace/venus/src/util/types.h

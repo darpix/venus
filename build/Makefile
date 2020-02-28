@@ -358,6 +358,33 @@ src/util/types.c.s:
 	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/util/types.c.s
 .PHONY : src/util/types.c.s
 
+src/venus.o: src/venus.c.o
+
+.PHONY : src/venus.o
+
+# target to build an object file
+src/venus.c.o:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/venus.c.o
+.PHONY : src/venus.c.o
+
+src/venus.i: src/venus.c.i
+
+.PHONY : src/venus.i
+
+# target to preprocess a source file
+src/venus.c.i:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/venus.c.i
+.PHONY : src/venus.c.i
+
+src/venus.s: src/venus.c.s
+
+.PHONY : src/venus.s
+
+# target to generate assembly for a file
+src/venus.c.s:
+	$(MAKE) -f CMakeFiles/venus.dir/build.make CMakeFiles/venus.dir/src/venus.c.s
+.PHONY : src/venus.c.s
+
 src/window.o: src/window.c.o
 
 .PHONY : src/window.o
@@ -446,6 +473,9 @@ help:
 	@echo "... src/util/types.o"
 	@echo "... src/util/types.i"
 	@echo "... src/util/types.s"
+	@echo "... src/venus.o"
+	@echo "... src/venus.i"
+	@echo "... src/venus.s"
 	@echo "... src/window.o"
 	@echo "... src/window.i"
 	@echo "... src/window.s"

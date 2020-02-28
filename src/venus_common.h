@@ -17,12 +17,13 @@
 #include <zlog.h>
 
 extern zlog_category_t *g_log;
+extern int (*g_error_callback)(void *win, unsigned err);
 
 #define VS_FALSE 				0
 #define VS_TRUE 				1
 
-#define VS_SUCCESS 						0x0000
-#define VS_FAILURE 						0x0001
+#define VS_SUCCESS 						0x0001
+#define VS_FAILURE 						0x0000
 
 
 
@@ -49,6 +50,7 @@ extern zlog_category_t *g_log;
 
 #define VS_FAIL_GLX						0b0000100000000000000000000000000
 #define VS_FAIL_GLX_NO_VISUAL			(0x0001 | VS_FAIL_GLX)
+#define VS_FAIL_GLX_INVALID_VERSION		(0x0002 | VS_FAIL_GLX)
 
 #ifdef VS_COMPILE_DO_NOT_PRINT_ERROR
 #define vs_err(ERR) return ERR

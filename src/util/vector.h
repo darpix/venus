@@ -8,6 +8,7 @@
 #define VS_VECTOR_H
 
 #include <stdlib.h>
+#include <stdarg.h>
 #include <string.h>
 
 unsigned vec_size(void *vec);
@@ -28,10 +29,13 @@ extern "C" {
  * @param NAME The name of the new vector
  */
 	
+#define VS_INTERNAL_SET_VECTOR(arg0, args...)
+
 #define VS_DEFINE_VECTOR_HEADER(TYPE, NAME)													\
 typedef TYPE *NAME;																			\
 																							\
 NAME create_##NAME(unsigned size);															\
+NAME make_##NAME(unsigned size, ...);														\
 void NAME##_resize(NAME vec, unsigned new_size);											\
 void NAME##_add(NAME dest, NAME src0, NAME src1);											\
 void NAME##_subtract(NAME dest, NAME src0, NAME src1);										\
@@ -55,6 +59,21 @@ NAME create_##NAME(unsigned size) {															\
 	*((unsigned*) source) = size;															\
 	source += sizeof(unsigned);																\
 	return (NAME) source;																	\
+}																							\
+																							\
+NAME make_##NAME(unsigned size, ...) {														\
+	NAME vector = create_##NAME(size);														\
+																							\
+	va_list values;																			\
+	va_start(values, size);																	\
+	if (sizeof(TYPE) < sizeof(int))															\
+		for (unsigned i = 0; i < size; ++i)													\
+			vector[i] = (TYPE) va_arg(values, int);											\
+	else																					\
+		for (unsigned i = 0; i < size; ++i)													\
+			vector[i] = va_arg(values, TYPE);												\
+	va_end(values);																			\
+	return vector;																			\
 }																							\
 																							\
 void NAME##_resize(NAME vec, unsigned new_size) {											\

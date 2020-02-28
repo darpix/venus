@@ -61,6 +61,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -90,23 +91,47 @@ Include dependency graph for window.c:</div>
 </map>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ac44e7b00d5bc2af9f87b752093e96fcd"><td class="memItemLeft" align="right" valign="top"><a id="ac44e7b00d5bc2af9f87b752093e96fcd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLX_CONTEXT_MAJOR_VERSION_ARB</b>&#160;&#160;&#160;0x2091</td></tr>
+<tr class="separator:ac44e7b00d5bc2af9f87b752093e96fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60923ecde3d05e9be4ec4688af4a186c"><td class="memItemLeft" align="right" valign="top"><a id="a60923ecde3d05e9be4ec4688af4a186c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>GLX_CONTEXT_MINOR_VERSION_ARB</b>&#160;&#160;&#160;0x2092</td></tr>
+<tr class="separator:a60923ecde3d05e9be4ec4688af4a186c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0a2a797f421f1fc06eb78ac0157f02ed"><td class="memItemLeft" align="right" valign="top"><a id="a0a2a797f421f1fc06eb78ac0157f02ed"></a>
-GLXContext&#160;</td><td class="memItemRight" valign="bottom"><b>context</b> (<a class="el" href="structwindow.html">window</a> *<a class="el" href="structwindow.html">window</a>)</td></tr>
-<tr class="separator:a0a2a797f421f1fc06eb78ac0157f02ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c94ea700a7d193ee3205fbb23e46e23"><td class="memItemLeft" align="right" valign="top"><a id="a1c94ea700a7d193ee3205fbb23e46e23"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>glx_check_support</b> (const char *ext_list, const char *extension)</td></tr>
+<tr class="separator:a1c94ea700a7d193ee3205fbb23e46e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab40b19047a9a2c12c380c53787fec6f1"><td class="memItemLeft" align="right" valign="top"><a id="ab40b19047a9a2c12c380c53787fec6f1"></a>
+XVisualInfo *&#160;</td><td class="memItemRight" valign="bottom"><b>glx_get_visual</b> (int *attributes, GLXFBConfig *framebuffer)</td></tr>
+<tr class="separator:ab40b19047a9a2c12c380c53787fec6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62c30c52b94a5b224b99eebcf10b3982"><td class="memItemLeft" align="right" valign="top"><a id="a62c30c52b94a5b224b99eebcf10b3982"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>glx_context_error</b> (Display *display, XErrorEvent *event)</td></tr>
+<tr class="separator:a62c30c52b94a5b224b99eebcf10b3982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d9562af2832a1fc390c04428fabc326"><td class="memItemLeft" align="right" valign="top"><a id="a3d9562af2832a1fc390c04428fabc326"></a>
+GLXContext&#160;</td><td class="memItemRight" valign="bottom"><b>glx_make_context</b> (XVisualInfo *visual_info, GLXFBConfig framebuffer, GLXContext sharelist, int direct)</td></tr>
+<tr class="separator:a3d9562af2832a1fc390c04428fabc326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8210ae1e8beaeb29b2b59ed9f11bf922"><td class="memItemLeft" align="right" valign="top"><a id="a8210ae1e8beaeb29b2b59ed9f11bf922"></a>
+GLXContext&#160;</td><td class="memItemRight" valign="bottom"><b>make_current</b> (<a class="el" href="structwindow.html">window</a> *<a class="el" href="structwindow.html">window</a>)</td></tr>
+<tr class="separator:a8210ae1e8beaeb29b2b59ed9f11bf922"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affebef5e6a51b1546cadf37adf74297a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8c.html#affebef5e6a51b1546cadf37adf74297a">venus_initialize</a> ()</td></tr>
 <tr class="memdesc:affebef5e6a51b1546cadf37adf74297a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes venus and the libraries used.  <a href="#affebef5e6a51b1546cadf37adf74297a">More...</a><br /></td></tr>
 <tr class="separator:affebef5e6a51b1546cadf37adf74297a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1667db02fb07f04dfb4b96ddec6893d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8c.html#aa1667db02fb07f04dfb4b96ddec6893d">create_window</a> (<a class="el" href="structwindow.html">window</a> *win)</td></tr>
+<tr class="memdesc:aa1667db02fb07f04dfb4b96ddec6893d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new window.  <a href="#aa1667db02fb07f04dfb4b96ddec6893d">More...</a><br /></td></tr>
+<tr class="separator:aa1667db02fb07f04dfb4b96ddec6893d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2ee2c8b10e2e4536bb4151990f48ac2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8c.html#aa2ee2c8b10e2e4536bb4151990f48ac2">destroy_window</a> (<a class="el" href="structwindow.html">window</a> *win)</td></tr>
 <tr class="memdesc:aa2ee2c8b10e2e4536bb4151990f48ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a window.  <a href="#aa2ee2c8b10e2e4536bb4151990f48ac2">More...</a><br /></td></tr>
 <tr class="separator:aa2ee2c8b10e2e4536bb4151990f48ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ddd3c1fff91f413837be14742e82c5e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8c.html#a7ddd3c1fff91f413837be14742e82c5e">venus_terminate</a> ()</td></tr>
 <tr class="memdesc:a7ddd3c1fff91f413837be14742e82c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminates venus and does memory clean up.  <a href="#a7ddd3c1fff91f413837be14742e82c5e">More...</a><br /></td></tr>
 <tr class="separator:a7ddd3c1fff91f413837be14742e82c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1667db02fb07f04dfb4b96ddec6893d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8c.html#aa1667db02fb07f04dfb4b96ddec6893d">create_window</a> (<a class="el" href="structwindow.html">window</a> *win)</td></tr>
-<tr class="memdesc:aa1667db02fb07f04dfb4b96ddec6893d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new window.  <a href="#aa1667db02fb07f04dfb4b96ddec6893d">More...</a><br /></td></tr>
-<tr class="separator:aa1667db02fb07f04dfb4b96ddec6893d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d2e831da7d3e6cfd60ff95835f1c9fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8c.html#a7d2e831da7d3e6cfd60ff95835f1c9fa">swap_buffers</a> (<a class="el" href="structwindow.html">window</a> *win)</td></tr>
+<tr class="memdesc:a7d2e831da7d3e6cfd60ff95835f1c9fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the framebuffers and clears the draw buffer.  <a href="#a7d2e831da7d3e6cfd60ff95835f1c9fa">More...</a><br /></td></tr>
+<tr class="separator:a7d2e831da7d3e6cfd60ff95835f1c9fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba54f1b4e0762bd4cc0434d4f17a87c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8c.html#aba54f1b4e0762bd4cc0434d4f17a87c4">set_title</a> (<a class="el" href="structwindow.html">window</a> *win, char *title)</td></tr>
 <tr class="memdesc:aba54f1b4e0762bd4cc0434d4f17a87c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a window's title.  <a href="#aba54f1b4e0762bd4cc0434d4f17a87c4">More...</a><br /></td></tr>
 <tr class="separator:aba54f1b4e0762bd4cc0434d4f17a87c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,12 +162,15 @@ Window&#160;</td><td class="memItemRight" valign="bottom"><b>g_root</b> = 0</td>
 <tr class="memitem:a71fea5df2d52de4b3c2e2ad8b18c115c"><td class="memItemLeft" align="right" valign="top"><a id="a71fea5df2d52de4b3c2e2ad8b18c115c"></a>
 zlog_category_t *&#160;</td><td class="memItemRight" valign="bottom"><b>g_log</b> = NULL</td></tr>
 <tr class="separator:a71fea5df2d52de4b3c2e2ad8b18c115c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e9fb4f61e22bd025fe21928351478ee"><td class="memItemLeft" align="right" valign="top"><a id="a5e9fb4f61e22bd025fe21928351478ee"></a>
-XVisualInfo *&#160;</td><td class="memItemRight" valign="bottom"><b>g_visual_info</b> = NULL</td></tr>
-<tr class="separator:a5e9fb4f61e22bd025fe21928351478ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a852596e508995c2317a4a3579e9219fe"><td class="memItemLeft" align="right" valign="top"><a id="a852596e508995c2317a4a3579e9219fe"></a>
-<a class="el" href="structwindow.html">window</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>current_window</b></td></tr>
-<tr class="separator:a852596e508995c2317a4a3579e9219fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add3ac508f74eb586d528f1346d466bc9"><td class="memItemLeft" align="right" valign="top"><a id="add3ac508f74eb586d528f1346d466bc9"></a>
+int(*&#160;</td><td class="memItemRight" valign="bottom"><b>g_error_callback</b> )(void *win, unsigned err)</td></tr>
+<tr class="separator:add3ac508f74eb586d528f1346d466bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a205f13063e2d37ce36eccb13e03d20e9"><td class="memItemLeft" align="right" valign="top"><a id="a205f13063e2d37ce36eccb13e03d20e9"></a>
+<a class="el" href="structwindow.html">window</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>g_current_window</b></td></tr>
+<tr class="separator:a205f13063e2d37ce36eccb13e03d20e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cb18135a86a9bb7eea82391beacdbb0"><td class="memItemLeft" align="right" valign="top"><a id="a4cb18135a86a9bb7eea82391beacdbb0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>g_context_err</b> = 0</td></tr>
+<tr class="separator:a4cb18135a86a9bb7eea82391beacdbb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Venus Graphics Engine Copyright (C) 2020, Wesley Studt </p>
@@ -171,7 +199,7 @@ XVisualInfo *&#160;</td><td class="memItemRight" valign="bottom"><b>g_visual_inf
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns an error code. Can be VS_FAIL_GLX_NO_VISUAL or VS_FAIL_GL_NOT_LOADED </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns whether it was successful or not </dd></dl>
 
 </div>
 </div>
@@ -199,7 +227,7 @@ XVisualInfo *&#160;</td><td class="memItemRight" valign="bottom"><b>g_visual_inf
   </table>
   </dd>
 </dl>
-<p>Returns an error code. </p>
+<p>Returns whether it was successful or not </p>
 
 </div>
 </div>
@@ -220,7 +248,7 @@ XVisualInfo *&#160;</td><td class="memItemRight" valign="bottom"><b>g_visual_inf
 
 <p>Flushes all X requests. </p>
 <p>This is only used to tell X to flush the display. It will likely be removed soon because it won't need to exist.</p>
-<dl class="section return"><dt>Returns</dt><dd>Returns an error code </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns whether it was successful or not </dd></dl>
 
 </div>
 </div>
@@ -248,7 +276,7 @@ XVisualInfo *&#160;</td><td class="memItemRight" valign="bottom"><b>g_visual_inf
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns an error code </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns whether it was successful or not </dd></dl>
 
 </div>
 </div>
@@ -286,7 +314,7 @@ XVisualInfo *&#160;</td><td class="memItemRight" valign="bottom"><b>g_visual_inf
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns an error code </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns whether it was successful or not </dd></dl>
 
 </div>
 </div>
@@ -324,7 +352,7 @@ XVisualInfo *&#160;</td><td class="memItemRight" valign="bottom"><b>g_visual_inf
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns an error code </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns whether it was successful or not </dd></dl>
 
 </div>
 </div>
@@ -352,7 +380,29 @@ XVisualInfo *&#160;</td><td class="memItemRight" valign="bottom"><b>g_visual_inf
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns an error code </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns whether it was successful or not </dd></dl>
+
+</div>
+</div>
+<a id="a7d2e831da7d3e6cfd60ff95835f1c9fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d2e831da7d3e6cfd60ff95835f1c9fa">&#9670;&nbsp;</a></span>swap_buffers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int swap_buffers </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structwindow.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Swaps the framebuffers and clears the draw buffer. </p>
+<p>TODO This is just a temporary function. I will delete it later because the dev does not need access to the GL buffers</p>
+<dl class="section return"><dt>Returns</dt><dd>Returns whether it was successful or not </dd></dl>
 
 </div>
 </div>
@@ -372,7 +422,7 @@ XVisualInfo *&#160;</td><td class="memItemRight" valign="bottom"><b>g_visual_inf
 </div><div class="memdoc">
 
 <p>Starts the event loop for any associated venus windows. </p>
-<dl class="section return"><dt>Returns</dt><dd>Returns an error code. The error code probably won't matter, but it will tell you if the program crashed or not </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns whether it was successful or not </dd></dl>
 
 </div>
 </div>
@@ -393,7 +443,7 @@ XVisualInfo *&#160;</td><td class="memItemRight" valign="bottom"><b>g_visual_inf
 
 <p>Initializes venus and the libraries used. </p>
 <p>This function does a couple of important things. First it initializes zlog, the logging library I have chosen to use. zlog needs to be started first in order to start logging immediately. As well as starting zlog, it also creates a connection to an X Server. It should be noted that this does not initalize OpenGL.</p>
-<dl class="section return"><dt>Returns</dt><dd>Returns an error code. Can be VS_FAIL_ZLOG_NOT_LOADED, VS_FAIL_ZLOG_MISSING_CAT, or VS_FAIL_X_NO_CONNECTION </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns whether it was successful or not </dd></dl>
 
 </div>
 </div>
@@ -414,7 +464,7 @@ XVisualInfo *&#160;</td><td class="memItemRight" valign="bottom"><b>g_visual_inf
 
 <p>Terminates venus and does memory clean up. </p>
 <p>This stops any X connections, destroys GL contexts, and finally, finishes zlog.</p>
-<dl class="section return"><dt>Returns</dt><dd>Returns an error code </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns whether it was successful or not </dd></dl>
 
 </div>
 </div>

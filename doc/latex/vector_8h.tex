@@ -1,6 +1,7 @@
 \hypertarget{vector_8h}{}\section{util/vector.h File Reference}
 \label{vector_8h}\index{util/vector.\+h@{util/vector.\+h}}
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
 Include dependency graph for vector.\+h\+:\nopagebreak
 \begin{figure}[H]
@@ -9,8 +10,7 @@ Include dependency graph for vector.\+h\+:\nopagebreak
 \includegraphics[width=196pt]{vector_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,8 +20,10 @@ This graph shows which files directly or indirectly include this file\+:
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \hyperlink{vector_8h_aef7794183fb0e54950ce39d24d56e88c}{V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+H\+E\+A\+D\+ER}(T\+Y\+PE,  N\+A\+ME)
+\#define \hyperlink{vector_8h_a23408848c6471414c769e5677fe1d21e}{V\+S\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+S\+E\+T\+\_\+\+V\+E\+C\+T\+OR}(arg0,  args...)
 \begin{DoxyCompactList}\small\item\em Defines a new vector type and includes function prototypes. \end{DoxyCompactList}\item 
+\#define {\bfseries V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+H\+E\+A\+D\+ER}(T\+Y\+PE,  N\+A\+ME)
+\item 
 \#define \hyperlink{vector_8h_a249e54d71982e9aa22445321c9fdd2cd}{V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+S\+O\+U\+R\+CE}(T\+Y\+PE,  N\+A\+ME)
 \begin{DoxyCompactList}\small\item\em Provides the source code for a previously defined vector type. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
@@ -50,6 +52,7 @@ Venus Graphics Engine Copyright (C) 2020, Wesley Studt
 \textcolor{keyword}{typedef} TYPE *NAME;                                                                         \(\backslash\)
                                                                                             \(\backslash\)
 NAME create\_##NAME(\textcolor{keywordtype}{unsigned} size);                                                          \(\backslash\)
+NAME make\_##NAME(\textcolor{keywordtype}{unsigned} size, ...);                                                       \(\backslash\)
 void NAME##\_resize(NAME vec, \textcolor{keywordtype}{unsigned} new\_size);                                            \(\backslash\)
 void NAME##\_add(NAME dest, NAME src0, NAME src1);                                           \(\backslash\)
 void NAME##\_subtract(NAME dest, NAME src0, NAME src1);                                      \(\backslash\)
@@ -57,19 +60,6 @@ void NAME##\_cross(NAME dest, NAME src0, NAME src1);                            
 void NAME##\_multiply(NAME dest, NAME src, TYPE scalar);                                     \(\backslash\)
 TYPE NAME##\_dot(NAME src0, NAME src1);                                                      \(\backslash\)
 \end{DoxyCode}
-
-
-Defines a new vector type and includes function prototypes. 
-
-In Venus, a vector represents a mathematical vector, not a container like std\+::vector. The reason for this is that since Venus is a G\+U\+I/graphics library, it needs to manipulate points in two-\/dimensional space and three-\/dimensional space. This requires functions that can add, multiply, etc., vectors.
-
-
-\begin{DoxyParams}{Parameters}
-{\em T\+Y\+PE} & The datatype the vector should contain \\
-\hline
-{\em N\+A\+ME} & The name of the new vector \\
-\hline
-\end{DoxyParams}
 \mbox{\Hypertarget{vector_8h_a249e54d71982e9aa22445321c9fdd2cd}\label{vector_8h_a249e54d71982e9aa22445321c9fdd2cd}} 
 \index{vector.\+h@{vector.\+h}!V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+S\+O\+U\+R\+CE@{V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+S\+O\+U\+R\+CE}}
 \index{V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+S\+O\+U\+R\+CE@{V\+S\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+S\+O\+U\+R\+CE}!vector.\+h@{vector.\+h}}
@@ -87,5 +77,24 @@ The two values need to reflect a vector type defined by V\+S\+\_\+\+D\+E\+F\+I\+
 {\em T\+Y\+PE} & The datatype the vector contains \\
 \hline
 {\em N\+A\+ME} & The name of the vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8h_a23408848c6471414c769e5677fe1d21e}\label{vector_8h_a23408848c6471414c769e5677fe1d21e}} 
+\index{vector.\+h@{vector.\+h}!V\+S\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+S\+E\+T\+\_\+\+V\+E\+C\+T\+OR@{V\+S\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+S\+E\+T\+\_\+\+V\+E\+C\+T\+OR}}
+\index{V\+S\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+S\+E\+T\+\_\+\+V\+E\+C\+T\+OR@{V\+S\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+S\+E\+T\+\_\+\+V\+E\+C\+T\+OR}!vector.\+h@{vector.\+h}}
+\subsubsection{\texorpdfstring{V\+S\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+S\+E\+T\+\_\+\+V\+E\+C\+T\+OR}{VS\_INTERNAL\_SET\_VECTOR}}
+{\footnotesize\ttfamily \#define V\+S\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+S\+E\+T\+\_\+\+V\+E\+C\+T\+OR(\begin{DoxyParamCaption}\item[{}]{arg0,  }\item[{}]{args... }\end{DoxyParamCaption})}
+
+
+
+Defines a new vector type and includes function prototypes. 
+
+In Venus, a vector represents a mathematical vector, not a container like std\+::vector. The reason for this is that since Venus is a G\+U\+I/graphics library, it needs to manipulate points in two-\/dimensional space and three-\/dimensional space. This requires functions that can add, multiply, etc., vectors.
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Y\+PE} & The datatype the vector should contain \\
+\hline
+{\em N\+A\+ME} & The name of the new vector \\
 \hline
 \end{DoxyParams}

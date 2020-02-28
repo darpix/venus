@@ -145,6 +145,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a43891902ce142858e0ee68ce4dff0231"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#a43891902ce142858e0ee68ce4dff0231">venus_begin_loop</a> ()</td></tr>
 <tr class="memdesc:a43891902ce142858e0ee68ce4dff0231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the event loop for any associated venus windows.  <a href="#a43891902ce142858e0ee68ce4dff0231">More...</a><br /></td></tr>
 <tr class="separator:a43891902ce142858e0ee68ce4dff0231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d2e831da7d3e6cfd60ff95835f1c9fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="window_8h.html#a7d2e831da7d3e6cfd60ff95835f1c9fa">swap_buffers</a> (<a class="el" href="structwindow.html">window</a> *win)</td></tr>
+<tr class="memdesc:a7d2e831da7d3e6cfd60ff95835f1c9fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the framebuffers and clears the draw buffer.  <a href="#a7d2e831da7d3e6cfd60ff95835f1c9fa">More...</a><br /></td></tr>
+<tr class="separator:a7d2e831da7d3e6cfd60ff95835f1c9fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Venus Graphics Engine Copyright (C) 2020, Wesley Studt </p>
@@ -173,7 +176,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns an error code. Can be VS_FAIL_GLX_NO_VISUAL or VS_FAIL_GL_NOT_LOADED </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns whether it was successful or not </dd></dl>
 
 </div>
 </div>
@@ -201,7 +204,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>Returns an error code. </p>
+<p>Returns whether it was successful or not </p>
 
 </div>
 </div>
@@ -222,7 +225,7 @@ Functions</h2></td></tr>
 
 <p>Flushes all X requests. </p>
 <p>This is only used to tell X to flush the display. It will likely be removed soon because it won't need to exist.</p>
-<dl class="section return"><dt>Returns</dt><dd>Returns an error code </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns whether it was successful or not </dd></dl>
 
 </div>
 </div>
@@ -250,7 +253,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns an error code </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns whether it was successful or not </dd></dl>
 
 </div>
 </div>
@@ -288,7 +291,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns an error code </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns whether it was successful or not </dd></dl>
 
 </div>
 </div>
@@ -326,7 +329,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns an error code </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns whether it was successful or not </dd></dl>
 
 </div>
 </div>
@@ -354,7 +357,29 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns an error code </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns whether it was successful or not </dd></dl>
+
+</div>
+</div>
+<a id="a7d2e831da7d3e6cfd60ff95835f1c9fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d2e831da7d3e6cfd60ff95835f1c9fa">&#9670;&nbsp;</a></span>swap_buffers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int swap_buffers </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structwindow.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Swaps the framebuffers and clears the draw buffer. </p>
+<p>TODO This is just a temporary function. I will delete it later because the dev does not need access to the GL buffers</p>
+<dl class="section return"><dt>Returns</dt><dd>Returns whether it was successful or not </dd></dl>
 
 </div>
 </div>
@@ -374,7 +399,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Starts the event loop for any associated venus windows. </p>
-<dl class="section return"><dt>Returns</dt><dd>Returns an error code. The error code probably won't matter, but it will tell you if the program crashed or not </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns whether it was successful or not </dd></dl>
 
 </div>
 </div>
@@ -395,7 +420,7 @@ Functions</h2></td></tr>
 
 <p>Initializes venus and the libraries used. </p>
 <p>This function does a couple of important things. First it initializes zlog, the logging library I have chosen to use. zlog needs to be started first in order to start logging immediately. As well as starting zlog, it also creates a connection to an X Server. It should be noted that this does not initalize OpenGL.</p>
-<dl class="section return"><dt>Returns</dt><dd>Returns an error code. Can be VS_FAIL_ZLOG_NOT_LOADED, VS_FAIL_ZLOG_MISSING_CAT, or VS_FAIL_X_NO_CONNECTION </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns whether it was successful or not </dd></dl>
 
 </div>
 </div>
@@ -416,7 +441,7 @@ Functions</h2></td></tr>
 
 <p>Terminates venus and does memory clean up. </p>
 <p>This stops any X connections, destroys GL contexts, and finally, finishes zlog.</p>
-<dl class="section return"><dt>Returns</dt><dd>Returns an error code </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns whether it was successful or not </dd></dl>
 
 </div>
 </div>

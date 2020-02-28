@@ -59,6 +59,17 @@ CMakeFiles/venus.dir/src/util/types.c.o: ../src/util/types.c
 CMakeFiles/venus.dir/src/util/types.c.o: ../src/util/types.h
 CMakeFiles/venus.dir/src/util/types.c.o: ../src/util/vector.h
 
+CMakeFiles/venus.dir/src/venus.c.o: ../src/engine/graphics.h
+CMakeFiles/venus.dir/src/venus.c.o: ../src/toolkit/default_theme.h
+CMakeFiles/venus.dir/src/venus.c.o: ../src/toolkit/theme.h
+CMakeFiles/venus.dir/src/venus.c.o: ../src/util/types.h
+CMakeFiles/venus.dir/src/venus.c.o: ../src/util/vector.h
+CMakeFiles/venus.dir/src/venus.c.o: ../src/venus.c
+CMakeFiles/venus.dir/src/venus.c.o: ../src/venus.h
+CMakeFiles/venus.dir/src/venus.c.o: ../src/venus_common.h
+CMakeFiles/venus.dir/src/venus.c.o: ../src/window.h
+
+CMakeFiles/venus.dir/src/window.c.o: ../src/engine/graphics.h
 CMakeFiles/venus.dir/src/window.c.o: ../src/toolkit/default_theme.h
 CMakeFiles/venus.dir/src/window.c.o: ../src/toolkit/theme.h
 CMakeFiles/venus.dir/src/window.c.o: ../src/util/types.h

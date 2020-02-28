@@ -20,7 +20,8 @@ typedef struct __GLXcontextRec *__glx_context;
  * It carries an X Window and a pointer to it's own separate GLXContext that can be used to draw on the window.
  */
 
-typedef struct {/// The number of child widgets
+typedef struct {
+	/// The number of child widgets
 	unsigned n_children;
 	
 	/// Child widgets
@@ -29,31 +30,9 @@ typedef struct {/// The number of child widgets
 	/// Pointer to the window's unique GLXContext
 	__glx_context *context;
 	
-	/// The actual window
+	/// X window
 	__x_win xwin;
 } window;
-
-
-/**
- * @brief Initializes venus and the libraries used
- * 
- * This function does a couple of important things. First it initializes zlog, the logging library I have chosen to use.
- * zlog needs to be started first in order to start logging immediately.
- * As well as starting zlog, it also creates a connection to an X Server.
- * It should be noted that this does not initalize OpenGL.
- * 
- * @return Returns an error code. Can be VS_FAIL_ZLOG_NOT_LOADED, VS_FAIL_ZLOG_MISSING_CAT, or VS_FAIL_X_NO_CONNECTION
- */
-int venus_initialize();
-
-/**
- * @brief Terminates venus and does memory clean up
- * 
- * This stops any X connections, destroys GL contexts, and finally, finishes zlog.
- * 
- * @return Returns an error code
- */
-int venus_terminate();
 
 /**
  * @brief Creates a new window
@@ -62,7 +41,7 @@ int venus_terminate();
  * 
  * @param win Pointer to window
  * 
- * @return Returns an error code. Can be VS_FAIL_GLX_NO_VISUAL or VS_FAIL_GL_NOT_LOADED
+ * @return Returns whether it was successful or not
  */
 int create_window(window *win);
 
@@ -73,7 +52,7 @@ int create_window(window *win);
  * 
  * @param win Pointer to window
  * 
- * @Return Returns an error code.
+ * @Return Returns whether it was successful or not
  */
 int destroy_window(window *win);
 
@@ -83,7 +62,7 @@ int destroy_window(window *win);
  * @param win Pointer to window
  * @param title The desired title
  * 
- * @return Returns an error code
+ * @return Returns whether it was successful or not
  */
 int set_title(window *win, char* title);
 
@@ -93,7 +72,7 @@ int set_title(window *win, char* title);
  * @param win Pointer to window
  * @param color The window's color. Only the first three values, the red, green, and blue values, are used.
  * 
- * @return Returns an error code
+ * @return Returns whether it was successful or not
  */
 int set_background_color(window *win, color color);
 
@@ -104,7 +83,7 @@ int set_background_color(window *win, color color);
  * 
  * @param win Pointer to window
  * 
- * @return Returns an error code
+ * @return Returns whether it was successful or not
  */
 int show(window *win);
 
@@ -115,24 +94,18 @@ int show(window *win);
  * 
  * @param win Pointer to window
  * 
- * @return Returns an error code
+ * @return Returns whether it was successful or not
  */
 int hide(window *win);
 
 /**
- * @brief Flushes all X requests
+ * @brief Swaps the framebuffers and clears the draw buffer
  * 
- * This is only used to tell X to flush the display. It will likely be removed soon because it won't need to exist.
+ * TODO This is just a temporary function. I will delete it later because the dev does not need access to the GL buffers
  * 
- * @return Returns an error code
+ * @return Returns whether it was successful or not
  */
-int flush();
 
-/**
- * @brief Starts the event loop for any associated venus windows
- * 
- * @return Returns an error code. The error code probably won't matter, but it will tell you if the program crashed or not
- */
-int venus_begin_loop();
+int swap_buffers(window *win);
 
 #endif

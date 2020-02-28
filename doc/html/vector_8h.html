@@ -72,6 +72,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdarg.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for vector.h:</div>
@@ -101,8 +102,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:aef7794183fb0e54950ce39d24d56e88c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#aef7794183fb0e54950ce39d24d56e88c">VS_DEFINE_VECTOR_HEADER</a>(TYPE,  NAME)</td></tr>
-<tr class="memdesc:aef7794183fb0e54950ce39d24d56e88c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a new vector type and includes function prototypes.  <a href="#aef7794183fb0e54950ce39d24d56e88c">More...</a><br /></td></tr>
+<tr class="memitem:a23408848c6471414c769e5677fe1d21e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a23408848c6471414c769e5677fe1d21e">VS_INTERNAL_SET_VECTOR</a>(arg0,  args...)</td></tr>
+<tr class="memdesc:a23408848c6471414c769e5677fe1d21e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a new vector type and includes function prototypes.  <a href="#a23408848c6471414c769e5677fe1d21e">More...</a><br /></td></tr>
+<tr class="separator:a23408848c6471414c769e5677fe1d21e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef7794183fb0e54950ce39d24d56e88c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_DEFINE_VECTOR_HEADER</b>(TYPE,  NAME)</td></tr>
 <tr class="separator:aef7794183fb0e54950ce39d24d56e88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a249e54d71982e9aa22445321c9fdd2cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a249e54d71982e9aa22445321c9fdd2cd">VS_DEFINE_VECTOR_SOURCE</a>(TYPE,  NAME)</td></tr>
 <tr class="memdesc:a249e54d71982e9aa22445321c9fdd2cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the source code for a previously defined vector type.  <a href="#a249e54d71982e9aa22445321c9fdd2cd">More...</a><br /></td></tr>
@@ -145,17 +148,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>vec_delete</b> (void 
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">typedef</span> TYPE *NAME;                                                                         \</div><div class="line">                                                                                            \</div><div class="line">NAME create_##NAME(<span class="keywordtype">unsigned</span> size);                                                          \</div><div class="line">void NAME##_resize(NAME vec, <span class="keywordtype">unsigned</span> new_size);                                            \</div><div class="line">void NAME##_add(NAME dest, NAME src0, NAME src1);                                           \</div><div class="line">void NAME##_subtract(NAME dest, NAME src0, NAME src1);                                      \</div><div class="line">void NAME##_cross(NAME dest, NAME src0, NAME src1);                                         \</div><div class="line">void NAME##_multiply(NAME dest, NAME src, TYPE scalar);                                     \</div><div class="line">TYPE NAME##_dot(NAME src0, NAME src1);                                                      \</div></div><!-- fragment -->
-<p>Defines a new vector type and includes function prototypes. </p>
-<p>In Venus, a vector represents a mathematical vector, not a container like std::vector. The reason for this is that since Venus is a GUI/graphics library, it needs to manipulate points in two-dimensional space and three-dimensional space. This requires functions that can add, multiply, etc., vectors.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">TYPE</td><td>The datatype the vector should contain </td></tr>
-    <tr><td class="paramname">NAME</td><td>The name of the new vector </td></tr>
-  </table>
-  </dd>
-</dl>
-
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">typedef</span> TYPE *NAME;                                                                         \</div><div class="line">                                                                                            \</div><div class="line">NAME create_##NAME(<span class="keywordtype">unsigned</span> size);                                                          \</div><div class="line">NAME make_##NAME(<span class="keywordtype">unsigned</span> size, ...);                                                       \</div><div class="line">void NAME##_resize(NAME vec, <span class="keywordtype">unsigned</span> new_size);                                            \</div><div class="line">void NAME##_add(NAME dest, NAME src0, NAME src1);                                           \</div><div class="line">void NAME##_subtract(NAME dest, NAME src0, NAME src1);                                      \</div><div class="line">void NAME##_cross(NAME dest, NAME src0, NAME src1);                                         \</div><div class="line">void NAME##_multiply(NAME dest, NAME src, TYPE scalar);                                     \</div><div class="line">TYPE NAME##_dot(NAME src0, NAME src1);                                                      \</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a249e54d71982e9aa22445321c9fdd2cd"></a>
@@ -190,6 +183,44 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>vec_delete</b> (void 
   <table class="params">
     <tr><td class="paramname">TYPE</td><td>The datatype the vector contains </td></tr>
     <tr><td class="paramname">NAME</td><td>The name of the vector </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a23408848c6471414c769e5677fe1d21e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23408848c6471414c769e5677fe1d21e">&#9670;&nbsp;</a></span>VS_INTERNAL_SET_VECTOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VS_INTERNAL_SET_VECTOR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">args...&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines a new vector type and includes function prototypes. </p>
+<p>In Venus, a vector represents a mathematical vector, not a container like std::vector. The reason for this is that since Venus is a GUI/graphics library, it needs to manipulate points in two-dimensional space and three-dimensional space. This requires functions that can add, multiply, etc., vectors.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">TYPE</td><td>The datatype the vector should contain </td></tr>
+    <tr><td class="paramname">NAME</td><td>The name of the new vector </td></tr>
   </table>
   </dd>
 </dl>

@@ -99,10 +99,10 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_TRUE</b>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:a708711345054c692bc1346bcb060c96b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a940ab0db9205f4237326a7b15b3d7ed1"><td class="memItemLeft" align="right" valign="top"><a id="a940ab0db9205f4237326a7b15b3d7ed1"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_SUCCESS</b>&#160;&#160;&#160;0x0000</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_SUCCESS</b>&#160;&#160;&#160;0x0001</td></tr>
 <tr class="separator:a940ab0db9205f4237326a7b15b3d7ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4f37fb879d6c26e7c44d5a1f291b91e"><td class="memItemLeft" align="right" valign="top"><a id="ab4f37fb879d6c26e7c44d5a1f291b91e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAILURE</b>&#160;&#160;&#160;0x0001</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAILURE</b>&#160;&#160;&#160;0x0000</td></tr>
 <tr class="separator:ab4f37fb879d6c26e7c44d5a1f291b91e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fc9cc7e10103de2f20b46a7a2c3be61"><td class="memItemLeft" align="right" valign="top"><a id="a1fc9cc7e10103de2f20b46a7a2c3be61"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_VENUS</b>&#160;&#160;&#160;0b0010000000000000000000000000000</td></tr>
@@ -137,6 +137,9 @@ Macros</h2></td></tr>
 <tr class="memitem:a12388ed07f7be2360734c91ba451e2a1"><td class="memItemLeft" align="right" valign="top"><a id="a12388ed07f7be2360734c91ba451e2a1"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_GLX_NO_VISUAL</b>&#160;&#160;&#160;(0x0001 | VS_FAIL_GLX)</td></tr>
 <tr class="separator:a12388ed07f7be2360734c91ba451e2a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8840c47197d48d77621861f469ce7d3f"><td class="memItemLeft" align="right" valign="top"><a id="a8840c47197d48d77621861f469ce7d3f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VS_FAIL_GLX_INVALID_VERSION</b>&#160;&#160;&#160;(0x0002 | VS_FAIL_GLX)</td></tr>
+<tr class="separator:a8840c47197d48d77621861f469ce7d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a56a31cd8a771be13afca39e4aa5bc6"><td class="memItemLeft" align="right" valign="top"><a id="a1a56a31cd8a771be13afca39e4aa5bc6"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>vs_err</b>(ERR)&#160;&#160;&#160;{zlog_error(g_log, #ERR); return ERR;}</td></tr>
 <tr class="separator:a1a56a31cd8a771be13afca39e4aa5bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,6 +152,9 @@ Variables</h2></td></tr>
 <tr class="memitem:a71fea5df2d52de4b3c2e2ad8b18c115c"><td class="memItemLeft" align="right" valign="top"><a id="a71fea5df2d52de4b3c2e2ad8b18c115c"></a>
 zlog_category_t *&#160;</td><td class="memItemRight" valign="bottom"><b>g_log</b></td></tr>
 <tr class="separator:a71fea5df2d52de4b3c2e2ad8b18c115c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add3ac508f74eb586d528f1346d466bc9"><td class="memItemLeft" align="right" valign="top"><a id="add3ac508f74eb586d528f1346d466bc9"></a>
+int(*&#160;</td><td class="memItemRight" valign="bottom"><b>g_error_callback</b> )(void *win, unsigned err)</td></tr>
+<tr class="separator:add3ac508f74eb586d528f1346d466bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Venus Graphics Engine Copyright (C) 2020, Wesley Studt </p>
